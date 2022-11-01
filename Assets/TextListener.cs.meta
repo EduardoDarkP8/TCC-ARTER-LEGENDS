@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ac3118c6b021b004e864b3edce6c4388
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - text: {instanceID: 0}
+  - ob: {instanceID: 0}
+  - prephab: {fileID: 8000907397978380171, guid: b38f9ed7501a14845bd37d84c22f2773,
+      type: 3}
+  - Local: {instanceID: 0}
+  - canva: {instanceID: 0}
+  - pl: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

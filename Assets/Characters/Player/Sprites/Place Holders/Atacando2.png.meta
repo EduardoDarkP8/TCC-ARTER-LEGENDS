@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: d0a9be57ad8a05b46b188e1ca96e6bc2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6558589624292771193
+    second: Atacando2_0
+  - first:
+      213: 8525674825234241481
+    second: Atacando2_2
+  - first:
+      213: -8216948066903101840
+    second: Atacando2_3
+  - first:
+      213: -4799323588728437012
+    second: Atacando2_4
+  - first:
+      213: -3975621401208621896
+    second: Atacando2_5
+  - first:
+      213: 4272305839638983570
+    second: Atacando2_6
+  - first:
+      213: -4988426451059800434
+    second: Atacando2_7
+  - first:
+      213: -7741832232798091150
+    second: Atacando2_8
+  - first:
+      213: -345873043336715358
+    second: Atacando2_9
+  - first:
+      213: -7879889723491558624
+    second: Atacando2_10
+  - first:
+      213: -450533576084045013
+    second: Atacando2_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Atacando2_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 16
+        width: 18
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46169662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975888fa38ac40b50800000000000000
+      internalID: 6558589624292771193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atacando2_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 18
+        width: 30
+        height: 36
+      alignment: 9
+      pivot: {x: 0.73916954, y: 0.51439697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7d3942518415670800000000000000
+      internalID: 8525674825234241481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atacando2_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 14
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.78602505, y: 0.5580989}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e6866b44987fd80800000000000000
+      internalID: -8216948066903101840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atacando2_4
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 9
+        width: 30
+        height: 36
+      alignment: 9
+      pivot: {x: 0.7028315, y: 0.60500467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce640bbbf90656db0800000000000000
+      internalID: -4799323588728437012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atacando2_5
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 6
+        width: 18
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67709434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4f48b3661c3d8c0800000000000000
+      internalID: -3975621401208621896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atacando2_6
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 9
+        width: 30
+        height: 36
+      alignment: 9
+      pivot: {x: 0.29442343, y: 0.61097676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293328786874a4b30800000000000000
+      internalID: 4272305839638983570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atacando2_7
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 14
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.2119236, y: 0.56388795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e860b64929c85cab0800000000000000
+      internalID: -4988426451059800434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atacando2_8
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 18
+        width: 30
+        height: 36
+      alignment: 9
+      pivot: {x: 0.27624816, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278866d2a9c7f8490800000000000000
+      internalID: -7741832232798091150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
