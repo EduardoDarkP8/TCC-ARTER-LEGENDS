@@ -19,6 +19,7 @@ public class Raizes : Enimy
     {
         Follow();
         PivoAngle();
+        rgbd.velocity = Vector2.zero;
     }
     private void OnTriggerEnter2D(Collider2D collision)
 	{

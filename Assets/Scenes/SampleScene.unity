@@ -427,7 +427,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1204916216974711301, guid: f45ec1194f028fe43bf3f30af1405132,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -556,6 +556,8 @@ MonoBehaviour:
   ataqueSpeed: 0.3
   AtaqueTime: 0
   anima: {fileID: 624196178}
+  Life: 2
+  KnockBack: 0
   Velo: 5
   ataSpd: 0
 --- !u!1 &948382106
@@ -4316,6 +4318,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1392528995}
+  - component: {fileID: 1392528996}
+  - component: {fileID: 1392528997}
   m_Layer: 0
   m_Name: ShotLocal
   m_TagString: Untagged
@@ -4337,6 +4341,44 @@ Transform:
   m_Father: {fileID: 348584022}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1392528996
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392528994}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02092266, y: 0.29989672}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34441185, y: 1.5997934}
+  m_EdgeRadius: 0
+--- !u!114 &1392528997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392528994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c33487477d027146964bbb783f89cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1429140214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,6 +4725,7 @@ MonoBehaviour:
   - 
   - 
   PlayerAngle: 0
+  HitCollider: {fileID: 1392528996}
   TriggerConfirm: 0
   sprites:
   - {fileID: -4784863081862010928, guid: 284bd1b26dfcdb146b2018de97a9fc40, type: 3}
@@ -4703,7 +4746,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1782971965}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -4712,7 +4755,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &1782971971
 CapsuleCollider2D:
@@ -4801,7 +4844,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

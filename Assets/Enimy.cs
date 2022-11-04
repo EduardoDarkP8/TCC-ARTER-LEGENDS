@@ -11,6 +11,8 @@ public class Enimy : MonoBehaviour
 	public float ataqueSpeed;
 	public bool AtaqueTime;
 	public Animator anima;
+	public int Life;
+	public bool KnockBack;
 	public void Follow() 
 	{
 		if (Target != null && AtaqueTime == false)
@@ -49,5 +51,12 @@ public class Enimy : MonoBehaviour
 		yield return new WaitForSeconds(tempo);
 		AtaqueTime = false;
 		anima.SetBool("Ataque", false);
+	}
+	public void Morrer()
+	{
+		if (Life<0) 
+		{
+			Destroy(gameObject);
+		}
 	}
 }

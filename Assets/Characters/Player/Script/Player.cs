@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     public string[] name = new string[2];
     private bool Attacking;
     public float PlayerAngle;
-
+    public Collider2D HitCollider;
     public bool TriggerConfirm;
     public float xm { get; set; }
     public float ym { get; set; }
@@ -127,26 +127,28 @@ public class Player : MonoBehaviour
         {
             anima.SetBool("Ataque",true);
             Attacking = true;
+            HitCollider.enabled = true;
             StartCoroutine(CoolDown(aSpeed[selected], PlayerAnimation.attack));
         }
-		else 
+		else if (Input.GetMouseButton(0) == false)
         {
             anima.SetBool("Ataque", false);
             Attacking = false;
+
+            HitCollider.enabled = false;
         }
 
     }
 
 	void Update()
     {
-        
+        characterRg.velocity = Vector2.zero;
     }
     public IEnumerator CoolDown(float tempo, PlayerAnimation State)
     {
         status = State;
         yield return new WaitForSeconds(tempo);
         status = PlayerAnimation.walk;
-        
     }
     
 }
