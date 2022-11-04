@@ -12,6 +12,8 @@ public class Raizes : Enimy
         rgbd = GetComponent<Rigidbody2D>();
         Velocity = Velo;
         Target = null;
+        GerarVida();
+        Morrer();
     }
 
     // Update is called once per frame

@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     public float ym { get; set; }
     public Sprite[] sprites = new Sprite[2];
     public PlayerAnimation status;
-
+    public Vivo vida;
     public GameObject Pivo;
     Rigidbody2D characterRg;
     public Animator anima;
@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         hp[1] = 10;
 
         mana[0] = 10;
-        mana[1] = 6;
+        mana[1  ] = 6;
 
         aDamage[0] = 1;
         aDamage[1] = 3;
@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
     {
         Spwan();
         selected = playerSelected(selected);
+        vida.Vida = hp[selected];
         anima.runtimeAnimatorController = AnimatorController[selected];
         GetComponent<SpriteRenderer>().sprite = sprites[selected];
     }

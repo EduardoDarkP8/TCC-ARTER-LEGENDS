@@ -30,7 +30,7 @@ public class TextListener : MonoBehaviour
 
 	public void Criar()
     {
-        Debug.Log("ASDA");
+
         if (GameObject.Find("Text Box") == null && Existe == false)
         {
 

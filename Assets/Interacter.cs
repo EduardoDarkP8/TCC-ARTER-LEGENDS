@@ -28,7 +28,7 @@ public class Interacter : MonoBehaviour
         {
             txt = null;
         }
-    
+        
     }
 
     // Update is called once per frame

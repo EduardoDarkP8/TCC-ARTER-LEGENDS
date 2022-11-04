@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Vivo : MonoBehaviour
 {
-    public int Vida;
+    public double Vida;
     // Start is called before the first frame update
     void Start()
     {
