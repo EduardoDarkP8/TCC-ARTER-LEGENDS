@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6098734039066969139}
   - component: {fileID: 3412849918269943729}
   - component: {fileID: 3905635598134264431}
+  - component: {fileID: -6131372045987887208}
   m_Layer: 0
   m_Name: ShurikenOB
   m_TagString: Untagged
@@ -94,6 +95,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6131372045987887208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098734039066969150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c33487477d027146964bbb783f89cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  damage: 0.5
+  isShot: 1
+  Knockack: 1
 --- !u!1 &6098734039571137916
 GameObject:
   m_ObjectHideFlags: 0

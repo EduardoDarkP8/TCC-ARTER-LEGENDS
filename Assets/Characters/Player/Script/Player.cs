@@ -50,11 +50,11 @@ public class Player : MonoBehaviour
         mana[0] = 10;
         mana[1  ] = 6;
 
-        aDamage[0] = 1;
-        aDamage[1] = 3;
+        aDamage[0] = 0.5;
+        aDamage[1] = 1;
 
-        sDamage[0] = 1;
-        sDamage[1] = 3;
+        sDamage[0] = 0.5;
+        sDamage[1] = 1;
 
         wSpeed[0] = 4;
         wSpeed[1] = 3;

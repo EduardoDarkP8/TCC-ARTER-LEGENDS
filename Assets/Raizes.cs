@@ -13,7 +13,7 @@ public class Raizes : Enimy
         Velocity = Velo;
         Target = null;
         GerarVida();
-        Morrer();
+
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class Raizes : Enimy
     {
         Follow();
         PivoAngle();
+        Morrer();
         rgbd.velocity = Vector2.zero;
     }
     private void OnTriggerEnter2D(Collider2D collision)

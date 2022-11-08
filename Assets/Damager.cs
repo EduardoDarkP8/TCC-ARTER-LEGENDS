@@ -5,6 +5,9 @@ using UnityEngine;
 public class Damager : MonoBehaviour
 {
     public bool isPlayer;
+    public double damage;
+    public bool isShot;
+    public double Knockack;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +23,23 @@ public class Damager : MonoBehaviour
 	{
         if (collision.gameObject.GetComponent<Vivo>() != null)
         {
-            Debug.Log("SDASD");
             if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false) 
             {
-                collision.gameObject.GetComponent<Vivo>().Vida -= 1;
+                collision.gameObject.GetComponent<Vivo>().Vida -= damage;
+				if (isShot)
+                {
+                    Destroy(gameObject);
+                }
             }
-            if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
+            else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
             {
                 collision.gameObject.GetComponent<Vivo>().Vida -= 1;
+                if (isShot)
+                {
+                    Destroy(gameObject);
+                }
             }
+			
         }
 	}
 }

@@ -62,6 +62,7 @@ public class Enimy : MonoBehaviour
 		if (vida.Vida <= 0)
         {
             Destroy(gameObject);
+
         }
     }
 	public void GerarVida() 
