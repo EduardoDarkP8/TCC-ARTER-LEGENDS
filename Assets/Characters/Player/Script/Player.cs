@@ -13,10 +13,10 @@ public class Player : MonoBehaviour
 {
     public int selected;
     public string PlayerDirect;
-    public double[] hp = new double[2];
-    public double[] mana = new double[2];
-    public double[] aDamage = new double[2];
-    public double[] sDamage = new double[2];
+    public int[] hp = new int[2];
+    public int[] mana = new int[2];
+    public int[] aDamage = new int[2];
+    public int[] sDamage = new int[2];
     public float[] wSpeed = new float[2];
     public float[] aSpeed = new float[2];
     public float[] sSpeed = new float[2];
@@ -44,17 +44,17 @@ public class Player : MonoBehaviour
     }
 	void Spwan() 
     {
-        hp[0] = 6;
-        hp[1] = 10;
+        hp[0] = 10;
+        hp[1] = 14;
 
         mana[0] = 10;
         mana[1  ] = 6;
 
-        aDamage[0] = 0.5;
+        aDamage[0] = 2;
         aDamage[1] = 1;
 
-        sDamage[0] = 0.5;
-        sDamage[1] = 1;
+        sDamage[0] = 1;
+        sDamage[1] = 2;
 
         wSpeed[0] = 4;
         wSpeed[1] = 3;

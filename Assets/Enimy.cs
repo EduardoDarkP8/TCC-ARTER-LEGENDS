@@ -11,7 +11,7 @@ public class Enimy : MonoBehaviour
 	public float ataqueSpeed;
 	public bool AtaqueTime;
 	public Animator anima;
-	public double Life;
+	public int Life;
 	public bool KnockBack;
 	public Vivo vida;
 	void Start() 

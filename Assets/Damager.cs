@@ -5,13 +5,18 @@ using UnityEngine;
 public class Damager : MonoBehaviour
 {
     public bool isPlayer;
-    public double damage;
+    public int damage;
     public bool isShot;
-    public double Knockack;
+    public float Knockack;
+    public Vivo player;
+    public Enimy Inimigo;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (isPlayer)
+        {
+            Inimigo = null;
+        }
     }
 
     // Update is called once per frame
@@ -19,14 +24,17 @@ public class Damager : MonoBehaviour
     {
         
     }
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.GetComponent<Vivo>() != null)
         {
-            if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false) 
+            if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false)
             {
-                collision.gameObject.GetComponent<Vivo>().Vida -= damage;
-				if (isShot)
+                if (player.Vida != 0)
+                {
+                    player.Pv_C = player.Pv_C - damage;
+                }
+                if (isShot)
                 {
                     Destroy(gameObject);
                 }
@@ -39,7 +47,34 @@ public class Damager : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-			
+
         }
-	}
+        
+    }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Vivo>() != null)
+        {
+            if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false)
+            {
+                StartCoroutine(CoolDown(Inimigo.ataqueSpeed));
+            }
+
+        }
+    }
+    public IEnumerator CoolDown(float tempo)
+    {
+        
+            if (player.Vida != 0)
+            {
+                player.Pv_C = player.Pv_C - damage;
+            }
+            if (isShot)
+            {
+                Destroy(gameObject);
+            }
+        
+        yield return new WaitForSeconds(tempo);
+        
+    }
 }
