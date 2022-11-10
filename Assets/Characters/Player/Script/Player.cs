@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         hp[1] = 14;
 
         mana[0] = 10;
-        mana[1  ] = 6;
+        mana[1] = 6;
 
         aDamage[0] = 2;
         aDamage[1] = 1;
@@ -59,8 +59,8 @@ public class Player : MonoBehaviour
         wSpeed[0] = 4;
         wSpeed[1] = 3;
 
-        aSpeed[0] = 0.6f;
-        aSpeed[1] = 0.3f;
+        aSpeed[0] = 1f;
+        aSpeed[1] = 2f;
 
         sSpeed[0] = 0.9f;
         sSpeed[1] = 0.6f;
@@ -99,15 +99,17 @@ public class Player : MonoBehaviour
         {
             Mover();
         }
-        Attack();
-        
+
+
+
+
 
     }
     void Mover() 
     {
         xm = Input.GetAxisRaw("Horizontal");
         ym = Input.GetAxisRaw("Vertical");
-        if (xm != 0 || ym != 0 && Attacking == false && TriggerConfirm == false) 
+        if (xm != 0 || ym != 0 && Attacking == false && TriggerConfirm == false && status == PlayerAnimation.walk) 
         {
             
             characterRg.MovePosition(transform.position + new Vector3(xm, ym, 0) * wSpeed[selected] * Time.deltaTime);
@@ -123,19 +125,19 @@ public class Player : MonoBehaviour
     }
     void Attack() 
     {
-
-        if (Input.GetMouseButtonDown(0) && TriggerConfirm == false)
-        {
-            anima.SetBool("Ataque",true);
-            Attacking = true;
-            HitCollider.enabled = true;
-            StartCoroutine(CoolDown(aSpeed[selected], PlayerAnimation.attack));
+        StartCoroutine(CoolDown(aSpeed[selected], PlayerAnimation.attack));
+        if (status == PlayerAnimation.attack)
+        { 
+        anima.SetBool("Ataque",true);
+        Attacking = true;
+        HitCollider.enabled = true;
         }
-		else if (Input.GetMouseButton(0) == false)
+
+
+        else if(status != PlayerAnimation.attack)
         {
             anima.SetBool("Ataque", false);
             Attacking = false;
-
             HitCollider.enabled = false;
         }
 
@@ -143,13 +145,21 @@ public class Player : MonoBehaviour
 
 	void Update()
     {
+
+        Attack();
         characterRg.velocity = Vector2.zero;
+
     }
     public IEnumerator CoolDown(float tempo, PlayerAnimation State)
     {
-        status = State;
-        yield return new WaitForSeconds(tempo);
-        status = PlayerAnimation.walk;
+        if (Input.GetMouseButtonDown(0)) 
+        {
+            status = State;
+            yield return new WaitForSeconds(tempo);
+            status = PlayerAnimation.walk;
+
+        }
+        yield return null;
     }
     
 }
