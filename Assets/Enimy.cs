@@ -14,6 +14,7 @@ public class Enimy : MonoBehaviour
 	public int Life;
 	public bool KnockBack;
 	public Vivo vida;
+	public Vector3 Direct;
 	void Start() 
 	{
 		
@@ -41,7 +42,7 @@ public class Enimy : MonoBehaviour
 	{
 		if (Target != null && AtaqueTime == false) 
 		{
-			Vector3 Direct = Target.transform.position - transform.position;
+			Direct = Target.transform.position - transform.position;
 			float angle = Mathf.Atan2(Direct.y, Direct.x) * Mathf.Rad2Deg;
 			pivo.transform.eulerAngles = new Vector3(0, 0, angle);
 			anima.SetFloat("Y",Direct.y);

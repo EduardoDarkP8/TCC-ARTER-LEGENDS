@@ -575,6 +575,7 @@ MonoBehaviour:
   Life: 3
   KnockBack: 0
   vida: {fileID: 624196175}
+  Direct: {x: 0, y: 0, z: 0}
   Velo: 5
   ataSpd: 0.3
 --- !u!1 &948382106
@@ -664,9 +665,9 @@ MonoBehaviour:
   isPlayer: 0
   damage: 1
   isShot: 0
-  Knockack: 0
+  Knockack: 10
   player: {fileID: 1782971972}
-  Inimigo: {fileID: 0}
+  Inimigo: {fileID: 624196182}
 --- !u!1 &1030069618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,7 +5148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb8fa19a5f4aac4987377a60d1ae07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selected: 1
+  selected: 0
   PlayerDirect: 
   hp: 0000000000000000
   mana: 0000000000000000
@@ -5180,6 +5181,7 @@ MonoBehaviour:
   status: 0
   vida: {fileID: 1782971972}
   Pivo: {fileID: 348584021}
+  characterRg: {fileID: 0}
   anima: {fileID: 1782971966}
   AnimatorController:
   - {fileID: 9100000, guid: d2ff774bc9d450143ada658b5a604ba0, type: 2}
@@ -5218,8 +5220,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07594681, y: -0.83555293}
-  m_Size: {x: 0.54307365, y: 0.63003016}
+  m_Offset: {x: -0.07594681, y: -0.6766008}
+  m_Size: {x: 0.54307365, y: 0.9479344}
   m_Direction: 0
 --- !u!114 &1782971972
 MonoBehaviour:

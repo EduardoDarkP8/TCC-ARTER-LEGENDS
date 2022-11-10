@@ -33,6 +33,7 @@ public class Damager : MonoBehaviour
                 if (player.Vida != 0)
                 {
                     player.Pv_C = player.Pv_C - damage;
+
                 }
                 if (isShot)
                 {
@@ -42,6 +43,10 @@ public class Damager : MonoBehaviour
             else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
             {
                 collision.gameObject.GetComponent<Vivo>().Vida -= 1;
+                collision.GetComponent<Player>().xm = 0;
+                collision.GetComponent<Player>().ym = 0;
+                collision.GetComponent<Player>().characterRg.MovePosition(new Vector3(1,1,0));
+   
                 if (isShot)
                 {
                     Destroy(gameObject);
@@ -51,30 +56,5 @@ public class Damager : MonoBehaviour
         }
         
     }
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<Vivo>() != null)
-        {
-            if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false)
-            {
-                StartCoroutine(CoolDown(Inimigo.ataqueSpeed));
-            }
 
-        }
-    }
-    public IEnumerator CoolDown(float tempo)
-    {
-        
-            if (player.Vida != 0)
-            {
-                player.Pv_C = player.Pv_C - damage;
-            }
-            if (isShot)
-            {
-                Destroy(gameObject);
-            }
-        
-        yield return new WaitForSeconds(tempo);
-        
-    }
 }

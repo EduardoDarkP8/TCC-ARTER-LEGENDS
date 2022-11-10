@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public PlayerAnimation status;
     public Vivo vida;
     public GameObject Pivo;
-    Rigidbody2D characterRg;
+    public Rigidbody2D characterRg;
     public Animator anima;
     public AnimatorControllerParameter Wyn;
     public RuntimeAnimatorController[] AnimatorController = new RuntimeAnimatorController[2];

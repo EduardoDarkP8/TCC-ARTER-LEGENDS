@@ -20,7 +20,6 @@ public class AtaqueEnimy : MonoBehaviour
 	{
 		if (collision.name == "Body") 
         {
-            Debug.Log("Ataque");
             inimigo.Ataque();
         }
 	}
