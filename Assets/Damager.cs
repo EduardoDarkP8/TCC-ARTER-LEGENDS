@@ -12,14 +12,13 @@ public class Damager : MonoBehaviour
     public Enimy Inimigo;
     public bool Cooldown;
     public Collider2D collider;
-    public TriggerMobs trigger;
+    public int AtaqueSpeedMultiplier;
     // Start is called before the first frame update
     void Start()
     {
         if (isPlayer)
         {
             Inimigo = null;
-            trigger = null;
             collider = null;
         }
         
@@ -28,21 +27,20 @@ public class Damager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayer == false)
-        {
-            InimigoRecall();
-        }
+        
+        
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Vivo>() != null)
         {
-            if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false)
+            if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
             {
                 if (player.Vida != 0)
                 {
                     player.Pv_C = player.Pv_C - damage;
-
+                    Debug.Log("A");
                 }
                 if (isShot)
                 {
@@ -50,7 +48,8 @@ public class Damager : MonoBehaviour
                 }
                 Cooldown = true;
                 collider.enabled = false;
-                
+                StartCoroutine(CoolDown());
+
             }
             else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
             {
@@ -72,18 +71,14 @@ public class Damager : MonoBehaviour
     public IEnumerator CoolDown()
     {
 
-        if (trigger.IsHere && collider.enabled == false)
-        {
-            yield return new WaitForSeconds(Inimigo.ataqueSpeed * 10);
-            collider.enabled = true;
-        }
 
+
+            yield return new WaitForSeconds(Inimigo.ataqueSpeed * AtaqueSpeedMultiplier);
+            collider.enabled = true;
+        
     }
     void InimigoRecall() 
     {
-        while (isPlayer == false && trigger.IsHere == true && trigger != null)
-        {
-            StartCoroutine(CoolDown());
-        }
+        StartCoroutine(CoolDown());
     }
 }
