@@ -576,6 +576,9 @@ MonoBehaviour:
   KnockBack: 0
   vida: {fileID: 624196175}
   Direct: {x: 0, y: 0, z: 0}
+  Stuned: 0
+  Stunel: 0
+  Weight: 3
   Velo: 5
   ataSpd: 0.3
 --- !u!1 &948382106
@@ -671,7 +674,7 @@ MonoBehaviour:
   Inimigo: {fileID: 624196182}
   Cooldown: 0
   collider: {fileID: 948382108}
-  AtaqueSpeedMultiplier: 10
+  AtaqueSpeedMultiplier: 5
 --- !u!1 &1030069618
 GameObject:
   m_ObjectHideFlags: 0

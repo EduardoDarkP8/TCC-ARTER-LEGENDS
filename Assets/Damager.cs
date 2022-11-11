@@ -40,7 +40,7 @@ public class Damager : MonoBehaviour
                 if (player.Vida != 0)
                 {
                     player.Pv_C = player.Pv_C - damage;
-                    Debug.Log("A");
+
                 }
                 if (isShot)
                 {
@@ -54,7 +54,14 @@ public class Damager : MonoBehaviour
             else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
             {
                 collision.gameObject.GetComponent<Vivo>().Vida -= 1;
-     
+                if (collision.gameObject.GetComponent<Enimy>() != null) 
+                {
+                    collision.gameObject.GetComponent<Enimy>().KnockBackhit();
+                }
+                else if (collision.gameObject.GetComponent<Enimy>() == null) 
+                {
+                    return;
+                }
    
                 if (isShot)
                 {
@@ -70,12 +77,8 @@ public class Damager : MonoBehaviour
     }
     public IEnumerator CoolDown()
     {
-
-
-
             yield return new WaitForSeconds(Inimigo.ataqueSpeed * AtaqueSpeedMultiplier);
             collider.enabled = true;
-        
     }
     void InimigoRecall() 
     {

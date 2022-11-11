@@ -15,17 +15,30 @@ public class Enimy : MonoBehaviour
 	public bool KnockBack;
 	public Vivo vida;
 	public Vector3 Direct;
+	public bool Stuned;
+	public bool Stunel;
+	public float Weight;
+	float angle;
 	void Start() 
 	{
 		
 	}
+	void Update() 
+	{
+		if(Stunel == false)
+        {
+
+			Stuned = false;
+
+        }
+	}
 	public void Follow()
 	{
-		if (Target != null && AtaqueTime == false)
+		if (Target != null && AtaqueTime == false && Stuned == false)
 		{
 			rgbd.MovePosition(Vector2.MoveTowards(transform.position, Target.transform.position, Time.deltaTime * Velocity));
 		}
-		else 
+		else if(Stuned == false)
 		{
 			rgbd.MovePosition(Vector2.MoveTowards(transform.position, transform.position, Time.deltaTime * Velocity));
 		}
@@ -43,7 +56,8 @@ public class Enimy : MonoBehaviour
 		if (Target != null && AtaqueTime == false) 
 		{
 			Direct = Target.transform.position - transform.position;
-			float angle = Mathf.Atan2(Direct.y, Direct.x) * Mathf.Rad2Deg;
+			Direct = Direct.normalized;
+			angle = Mathf.Atan2(Direct.y, Direct.x) * Mathf.Rad2Deg;
 			pivo.transform.eulerAngles = new Vector3(0, 0, angle);
 			anima.SetFloat("Y",Direct.y);
 			anima.SetFloat("X", Direct.x);
@@ -69,5 +83,25 @@ public class Enimy : MonoBehaviour
 	public void GerarVida() 
 	{
 		vida.Vida = Life;
+	}
+	public void KnockBackhit() 
+	{
+
+		Stuned = true;
+		Vector3 Local = (transform.position - pivo.transform.position);
+
+		StartCoroutine(Times(3,Local));
+		Debug.Log("A");
+	}
+	public IEnumerator Times(int times,Vector3 Distnance)
+	{
+		int Times = times;
+		while (Times < 3)
+		{
+			rgbd.MovePosition(Vector2.MoveTowards(transform.position, Distnance, Time.deltaTime * Weight));
+			yield return new WaitForSeconds(0.1f);
+			Times++;
+		}
+		yield return null;
 	}
 }
