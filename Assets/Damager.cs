@@ -11,19 +11,27 @@ public class Damager : MonoBehaviour
     public Vivo player;
     public Enimy Inimigo;
     public bool Cooldown;
+    public Collider2D collider;
+    public TriggerMobs trigger;
     // Start is called before the first frame update
     void Start()
     {
         if (isPlayer)
         {
             Inimigo = null;
+            trigger = null;
+            collider = null;
         }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPlayer == false)
+        {
+            InimigoRecall();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -41,6 +49,8 @@ public class Damager : MonoBehaviour
                     Destroy(gameObject);
                 }
                 Cooldown = true;
+                collider.enabled = false;
+                
             }
             else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
             {
@@ -59,44 +69,21 @@ public class Damager : MonoBehaviour
         }
         
     }
-    void OnTriggerStay2D(Collider2D other)
+    public IEnumerator CoolDown()
     {
-        if (other.gameObject.name == "Body" && isPlayer == false) 
+
+        if (trigger.IsHere && collider.enabled == false)
         {
-            StartCoroutine(CoolDown(other, Inimigo.ataqueSpeed * 10, damage));
+            yield return new WaitForSeconds(Inimigo.ataqueSpeed * 10);
+            collider.enabled = true;
         }
-        else
+
+    }
+    void InimigoRecall() 
+    {
+        while (isPlayer == false && trigger.IsHere == true && trigger != null)
         {
-            return;
+            StartCoroutine(CoolDown());
         }
     }
-    public IEnumerator CoolDown(Collider2D collision, float Time, int dano)
-    {
-
-        if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && Cooldown == false)
-        {
-            if (player.Vida != 0)
-            {
-                if (Cooldown == false)
-                {
-                    player.Pv_C = player.Pv_C - dano;
-                    Cooldown = true;
-                    yield return new WaitForSeconds(Time);
-                    Cooldown = false;
-                }
-            }
-            if (isShot)
-            {
-                Destroy(gameObject);
-            }
-            else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == false)
-            {
-                yield return null;
-            }
-
-        }
-    } 
-
-
-
 }
