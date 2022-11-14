@@ -9,6 +9,7 @@ public class Damager : MonoBehaviour
     public bool isShot;
     public float Knockack;
     public Vivo player;
+    public Player pl;
     public Enimy Inimigo;
     public bool Cooldown;
     public Collider2D collider;
@@ -19,8 +20,21 @@ public class Damager : MonoBehaviour
         if (isPlayer)
         {
             Inimigo = null;
-            collider = null;
+            if(isShot)
+			{
+                pl = GameObject.Find("Body").GetComponent<Player>();
+                damage = pl.sDamage[pl.selected];
+                
+			}
+            else if (isShot == false)
+            {
+                damage = pl.aDamage[pl.selected];
+            }
         }
+        if(isPlayer == false)
+		{
+            pl = null;
+		}
         
     }
 
@@ -37,6 +51,10 @@ public class Damager : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
             {
+                
+                collision.gameObject.GetComponent<Player>().KnockBackhit(Inimigo.gameObject.GetComponent<Transform>().position);
+
+                
                 if (player.Vida != 0)
                 {
                     player.Pv_C = player.Pv_C - damage;
@@ -44,6 +62,7 @@ public class Damager : MonoBehaviour
                 }
                 if (isShot)
                 {
+                    damage = 0;
                     Destroy(gameObject);
                 }
                 Cooldown = true;
@@ -53,10 +72,11 @@ public class Damager : MonoBehaviour
             }
             else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
             {
-                collision.gameObject.GetComponent<Vivo>().Vida -= 1;
+                StartCoroutine(DamagerReduz(collision));
                 if (collision.gameObject.GetComponent<Enimy>() != null) 
                 {
-                    collision.gameObject.GetComponent<Enimy>().KnockBackhit();
+                    collision.gameObject.GetComponent<Enimy>().KnockBackhit(pl.gameObject.GetComponent<Transform>().position); 
+                    Debug.Log("AAAA");
                 }
                 else if (collision.gameObject.GetComponent<Enimy>() == null) 
                 {
@@ -83,5 +103,15 @@ public class Damager : MonoBehaviour
     void InimigoRecall() 
     {
         StartCoroutine(CoolDown());
+    }
+    public IEnumerator DamagerReduz(Collider2D gm) 
+    {
+        gm.gameObject.GetComponent<Vivo>().Vida -= damage;
+        damage = 0;
+        yield return new WaitForSeconds(0.2f);
+
+        if (isShot) { damage = pl.sDamage[pl.selected]; }
+        if (isShot == false) { damage = pl.aDamage[pl.selected]; }
+
     }
 }

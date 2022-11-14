@@ -84,24 +84,19 @@ public class Enimy : MonoBehaviour
 	{
 		vida.Vida = Life;
 	}
-	public void KnockBackhit() 
+	public void KnockBackhit(Vector3 reference) 
 	{
 
 		Stuned = true;
-		Vector3 Local = (transform.position - pivo.transform.position);
-
-		StartCoroutine(Times(3,Local));
-		Debug.Log("A");
+		Vector3 Local = (transform.position - reference);
+		rgbd.MovePosition(Vector2.MoveTowards(transform.position, Local, Time.deltaTime * Weight));
+		StartCoroutine(Returnar());
 	}
-	public IEnumerator Times(int times,Vector3 Distnance)
+	private IEnumerator Returnar() 
 	{
-		int Times = times;
-		while (Times < 3)
-		{
-			rgbd.MovePosition(Vector2.MoveTowards(transform.position, Distnance, Time.deltaTime * Weight));
-			yield return new WaitForSeconds(0.1f);
-			Times++;
-		}
-		yield return null;
+		yield return new WaitForSeconds(0.5f);
+		Stuned = false;
+
 	}
+
 }

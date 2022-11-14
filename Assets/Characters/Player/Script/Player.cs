@@ -7,6 +7,7 @@ public enum PlayerAnimation
     walk,
     attack,
     interact,
+    stuned,
     shot
 }
 public class Player : MonoBehaviour
@@ -50,7 +51,7 @@ public class Player : MonoBehaviour
         mana[0] = 10;
         mana[1] = 6;
 
-        aDamage[0] = 2;
+        aDamage[0] = 1;
         aDamage[1] = 1;
 
         sDamage[0] = 1;
@@ -59,11 +60,11 @@ public class Player : MonoBehaviour
         wSpeed[0] = 4;
         wSpeed[1] = 3;
 
-        aSpeed[0] = 1f;
-        aSpeed[1] = 2f;
+        aSpeed[0] = 2f;
+        aSpeed[1] = 4f;
 
-        sSpeed[0] = 0.9f;
-        sSpeed[1] = 0.6f;
+        sSpeed[0] = 1.3f;
+        sSpeed[1] = 0.9f;
 
         aRange[0] = 4;
         aRange[1] = 2;
@@ -161,5 +162,19 @@ public class Player : MonoBehaviour
         }
         yield return null;
     }
-    
+    public void KnockBackhit(Vector3 reference)
+    {
+
+        status = PlayerAnimation.stuned;
+        Vector3 Local = (transform.position - reference);
+        characterRg.MovePosition(Vector2.MoveTowards(transform.position, Local, Time.deltaTime * 50));
+        StartCoroutine(Returnar());
+    }
+    private IEnumerator Returnar()
+    {
+        yield return new WaitForSeconds(0.5f);
+        status = PlayerAnimation.walk;
+
+    }
+
 }
