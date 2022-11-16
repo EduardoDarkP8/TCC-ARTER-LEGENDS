@@ -34,7 +34,9 @@ public class Damager : MonoBehaviour
         if(isPlayer == false)
 		{
             pl = null;
-		}
+            player = GameObject.Find("Body").GetComponent<Vivo>();
+        }
+		
         
     }
 
