@@ -200,6 +200,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -209,8 +211,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -231,9 +233,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -1449,6 +1454,63 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      folhas_52: 2159368784977704190
+      folhas_36: -3891729187254188433
+      folhas_3: -6088143603899546421
+      folhas_11: -312669723002110024
+      folhas_20: 8189246801500789221
+      folhas_17: 3738005880718584117
+      folhas_24: 6727850542513005478
+      folhas_35: 1270067387491270526
+      folhas_8: -702340427384601175
+      folhas_30: 6936629831120575615
+      folhas_0: 3434622335314778461
+      folhas_40: 9218085607397496970
+      folhas_13: 7453605695922897494
+      folhas_4: 2921122592357131469
+      folhas_34: -313481353907385678
+      folhas_48: -859278671179047223
+      folhas_50: -1776472637689961651
+      folhas_26: -3645229822236268767
+      folhas_46: 5482006615101181743
+      folhas_2: -7952681760588276142
+      folhas_53: -7405627623017501584
+      folhas_37: -972410590913895677
+      folhas_12: -3705324792777504124
+      folhas_58: 7114220530116603133
+      folhas_32: 8253535143663075396
+      folhas_43: -2874459557459103540
+      folhas_1: -2882775185617766093
+      folhas_45: -2274008366362596071
+      folhas_49: 60081012688287003
+      folhas_7: 1618030936342071896
+      folhas_15: -4724095136392215522
+      folhas_22: 1318315343246486299
+      folhas_16: -5404634389026980437
+      folhas_9: -3695188026464257805
+      folhas_41: 3923291909630960615
+      folhas_56: -3768282620009613230
+      folhas_47: -145820465740352095
+      folhas_29: 7801616981654311617
+      folhas_23: 2881507222327434179
+      folhas_28: -2894156386654384644
+      folhas_44: -3980188956461827318
+      folhas_33: -190084916790308531
+      folhas_10: 6351845633839844291
+      folhas_14: -733283098503723273
+      folhas_54: 1928490019141931933
+      folhas_18: -7380903205494205225
+      folhas_51: -7480785693731157009
+      folhas_21: 7023768882645821307
+      folhas_27: -215286403754508199
+      folhas_19: 6223358580459485886
+      folhas_6: -7172663824009472060
+      folhas_31: -1237024030219828911
+      folhas_5: -1781180178897635914
+      folhas_55: -5866610525866925024
+      folhas_25: 7384980242446231642
+      folhas_57: -6465175877378115222
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
