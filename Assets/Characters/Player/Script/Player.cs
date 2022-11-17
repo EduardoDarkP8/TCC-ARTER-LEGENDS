@@ -60,8 +60,8 @@ public class Player : MonoBehaviour
         wSpeed[0] = 4;
         wSpeed[1] = 3;
 
-        aSpeed[0] = 2f;
-        aSpeed[1] = 4f;
+        aSpeed[0] = 0.5f;
+        aSpeed[1] = 1f;
 
         sSpeed[0] = 1.3f;
         sSpeed[1] = 0.9f;
@@ -162,11 +162,11 @@ public class Player : MonoBehaviour
         }
         yield return null;
     }
-    public void KnockBackhit(Vector3 reference)
+    public void KnockBackhit(Transform reference)
     {
 
         status = PlayerAnimation.stuned;
-        Vector3 Local = (transform.position - reference);
+        Vector3 Local = (transform.position + reference.forward);
         characterRg.MovePosition(Vector2.MoveTowards(transform.position, Local, Time.deltaTime * 50));
         StartCoroutine(Returnar());
     }

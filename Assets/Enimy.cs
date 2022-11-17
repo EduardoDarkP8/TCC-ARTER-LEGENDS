@@ -84,11 +84,11 @@ public class Enimy : MonoBehaviour
 	{
 		vida.Vida = Life;
 	}
-	public void KnockBackhit(Vector3 reference) 
+	public void KnockBackhit(Transform reference) 
 	{
 
 		Stuned = true;
-		Vector3 Local = (transform.position - reference);
+		Vector3 Local = (transform.position + reference.forward);
 		rgbd.MovePosition(Vector2.MoveTowards(transform.position, Local, Time.deltaTime * Weight));
 		StartCoroutine(Returnar());
 	}

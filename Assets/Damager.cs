@@ -34,7 +34,9 @@ public class Damager : MonoBehaviour
         if(isPlayer == false)
 		{
             pl = null;
-		}
+            player = GameObject.Find("Body").GetComponent<Vivo>();
+        }
+		
         
     }
 
@@ -52,7 +54,7 @@ public class Damager : MonoBehaviour
             if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
             {
                 
-                collision.gameObject.GetComponent<Player>().KnockBackhit(Inimigo.gameObject.GetComponent<Transform>().position);
+                collision.gameObject.GetComponent<Player>().KnockBackhit(transform);
 
                 
                 if (player.Vida != 0)
@@ -75,8 +77,8 @@ public class Damager : MonoBehaviour
                 StartCoroutine(DamagerReduz(collision));
                 if (collision.gameObject.GetComponent<Enimy>() != null) 
                 {
-                    collision.gameObject.GetComponent<Enimy>().KnockBackhit(pl.gameObject.GetComponent<Transform>().position); 
-                    Debug.Log("AAAA");
+                    collision.gameObject.GetComponent<Enimy>().KnockBackhit(transform); 
+
                 }
                 else if (collision.gameObject.GetComponent<Enimy>() == null) 
                 {
