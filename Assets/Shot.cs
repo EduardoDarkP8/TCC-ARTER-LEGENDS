@@ -31,6 +31,7 @@ public class Shot : MonoBehaviour
         {
                   
                     Instantiate(shots[pl.selected], local);
+                    StartCoroutine(contDown());
         }
         break;
         case 0:
@@ -44,7 +45,7 @@ public class Shot : MonoBehaviour
         Instantiate(shots[pl.selected], local);
         Instantiate(shots[pl.selected], local.transform.position, lower);
         Instantiate(shots[pl.selected], local.transform.position, top);
-        StartCoroutine(pl.CoolDown(pl.sSpeed[pl.selected], PlayerAnimation.shot));
+        StartCoroutine(contDown());
         }
         break;
 
@@ -55,9 +56,20 @@ public class Shot : MonoBehaviour
 }
     private IEnumerator contDown() 
     {
+        pl.status = PlayerAnimation.shot;
         shot = false;
-        yield return new WaitForSeconds(pl.sSpeed[pl.selected]);
+        if (pl.selected == 0) 
+        {
+            yield return new WaitForSeconds(0.2f);
+        }
+        if (pl.selected == 1)
+        {
+            yield return new WaitForSeconds(5.4f);
+        }
         shot = true;
+        pl.status = PlayerAnimation.walk;
+        yield return null;
+
     }
     
     
