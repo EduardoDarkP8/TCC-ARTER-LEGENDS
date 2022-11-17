@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1269,11 +1269,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      arvre_48: 137259047
+      arvre_6: -1854356112
       arvre_10: -877826194
-      arvre_45: -565960792
       arvre_53: 1577829037
       arvre_40: -473974913
-      arvre_48: 137259047
       arvre_51: -1164397941
       arvre_27: -2037064134
       arvre_37: 2009134793
@@ -1323,7 +1323,7 @@ TextureImporter:
       arvre_22: 1624548965
       arvre_36: -1138148750
       arvre_12: 1806630299
-      arvre_6: -1854356112
+      arvre_45: -565960792
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
