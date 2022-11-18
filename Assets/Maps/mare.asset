@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: mare
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: fb689633a12f8ed40a8cf49d8d3783f3, type: 3}
+  - {fileID: 21300000, guid: 556b0dc378fee9e48b2bd7712d623cbf, type: 3}
+  - {fileID: 21300000, guid: 4077a46d681336346b9d1f6f89de83f8, type: 3}
+  - {fileID: 21300000, guid: c2cb3dad9d6a309409e14ed9be996362, type: 3}
+  - {fileID: 21300000, guid: 484cbd51070c6f345ab458aee378f6e3, type: 3}
+  - {fileID: 21300000, guid: 435025428617fed47877f03ec5cadcb4, type: 3}
+  - {fileID: 21300000, guid: acfb1189d3f45144fb74b31d24c442f7, type: 3}
+  - {fileID: 21300000, guid: 65b9438c0db43cc4aa7d7c19a9a66baa, type: 3}
+  - {fileID: 21300000, guid: dfac40cd93294b84195b744e05d523c6, type: 3}
+  - {fileID: 21300000, guid: d765d81563f4968408f08bed84b28653, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
