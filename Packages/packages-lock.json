@@ -73,18 +73,6 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.2d.tilemap.extras": {
-      "version": "2.2.3",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.tilemap": "1.0.0",
-        "com.unity.2d.tilemap": "1.0.0",
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.burst": {
       "version": "1.6.6",
       "depth": 2,
@@ -150,15 +138,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-      "version": "1.4.2",
-=======
-      "version": "1.4.0",
->>>>>>> Stashed changes
-=======
-      "version": "1.4.0",
->>>>>>> parent of d3164ae (Inicio do sistema de escolha)
+      "version": "1.5.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {

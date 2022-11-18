@@ -12,6 +12,7 @@ public enum PlayerAnimation
 }
 public class Player : MonoBehaviour
 {
+    
     public int selected;
     public string PlayerDirect;
     public int[] hp = new int[2];
@@ -39,12 +40,11 @@ public class Player : MonoBehaviour
     public AnimatorControllerParameter Wyn;
     public RuntimeAnimatorController[] AnimatorController = new RuntimeAnimatorController[2];
 
-    public int playerSelected(int player) 
-    {
-        return player;
-    }
+
 	void Spwan() 
     {
+
+        
         hp[0] = 10;
         hp[1] = 14;
 
@@ -78,20 +78,22 @@ public class Player : MonoBehaviour
 		
         
     }
-	void Awake()
-    {
-        Spwan();
-        selected = playerSelected(selected);
-        vida.Vida = hp[selected];
-        anima.runtimeAnimatorController = AnimatorController[selected];
-        GetComponent<SpriteRenderer>().sprite = sprites[selected];
-    }
+	
+    
     void GetComponents() 
     {
         characterRg = GetComponent<Rigidbody2D>();
     }
     private void Start()
 	{
+        
+        Debug.Log(selected.ToString());
+        Spwan();
+        vida.Vida = hp[selected];
+        anima.runtimeAnimatorController = AnimatorController[selected];
+        GetComponent<SpriteRenderer>().sprite = sprites[selected];
+
+
         GetComponents();
     }
     private void FixedUpdate()
@@ -100,11 +102,6 @@ public class Player : MonoBehaviour
         {
             Mover();
         }
-
-
-
-
-
     }
     void Mover() 
     {
