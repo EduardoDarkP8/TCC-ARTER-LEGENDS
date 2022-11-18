@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
@@ -10,7 +9,6 @@ public class Buttons : MonoBehaviour
     public Animator Anima3;
     public Animator Anima4;
     public Animator Anima5;
-    public int select;
     public void NewGame()
     {
         Anima.SetBool("SelectNewGame",true);
@@ -45,16 +43,4 @@ public class Buttons : MonoBehaviour
         yield return new WaitForSeconds(time);
         Anima3.SetBool("Ativar", true);
     }
-    public void SetCharacter() 
-    {
-
-       PlayerPrefs.SetInt("selected", 1);
-       Debug.Log(PlayerPrefs.GetInt("selected"));
-       SceneManager.LoadScene(1);
-    }
-	private void Start()
-	{
-
-        SetCharacter();
-	}
 }

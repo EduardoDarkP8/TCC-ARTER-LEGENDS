@@ -22637,7 +22637,7 @@ MonoBehaviour:
   pivo: {fileID: 1014718221}
   Target: {fileID: 0}
   Velocity: 0.5
-  ataqueSpeed: 2
+  ataqueSpeed: 0.1
   AtaqueTime: 0
   anima: {fileID: 1187115429}
   Life: 10
@@ -23125,7 +23125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  damage: 2
+  damage: 0
   isShot: 0
   Knockack: 0
   player: {fileID: 0}
@@ -23133,7 +23133,7 @@ MonoBehaviour:
   Inimigo: {fileID: 1187115432}
   Cooldown: 0
   collider: {fileID: 1767551243}
-  AtaqueSpeedMultiplier: 2
+  AtaqueSpeedMultiplier: 0
 --- !u!114 &1767551245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23271,7 +23271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb8fa19a5f4aac4987377a60d1ae07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selected: 1
+  selected: 0
   PlayerDirect: 
   hp: 0000000000000000
   mana: 0000000000000000
