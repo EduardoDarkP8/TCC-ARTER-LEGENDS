@@ -150,11 +150,15 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       "version": "1.4.2",
 =======
       "version": "1.4.0",
 >>>>>>> Stashed changes
+=======
+      "version": "1.4.0",
+>>>>>>> parent of d3164ae (Inicio do sistema de escolha)
       "depth": 1,
       "source": "registry",
       "dependencies": {
