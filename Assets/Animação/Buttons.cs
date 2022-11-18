@@ -9,7 +9,7 @@ public class Buttons : MonoBehaviour
     public Animator Anima2;
     public Animator Anima3;
     public Animator Anima4;
-
+    public Animator Anima5;
     public int select;
     public void NewGame()
     {
@@ -17,15 +17,15 @@ public class Buttons : MonoBehaviour
         Anima2.SetBool("Ativar", true);
         Anima.SetBool("Credits", false);
         Anima4.SetBool("Ativar", true);
-
+        Anima5.SetBool("Ativar", false);
     }
     public void Credits() 
     {
         Anima.SetBool("Credits", true);
         Anima2.SetBool("Ativar", true);
-        StartCoroutine(Cooldown(0.1f));
+        StartCoroutine(Cooldown(0.2f));
         Anima4.SetBool("Ativar", true);
-
+        Anima5.SetBool("Ativar", false);
     }
     public void Back() 
     {
@@ -34,9 +34,7 @@ public class Buttons : MonoBehaviour
         Anima.SetBool("Credits", false);
         Anima4.SetBool("Ativar", false);
         Anima3.SetBool("Ativar", false);
-       
-
-
+        Anima5.SetBool("Ativar", true);
     }
     public void Exit() 
     {
@@ -45,19 +43,18 @@ public class Buttons : MonoBehaviour
     public IEnumerator Cooldown(float time) 
     {
         yield return new WaitForSeconds(time);
-        Anima3.SetBool("Ativar",true);
+        Anima3.SetBool("Ativar", true);
     }
-
     public void SetCharacter() 
     {
 
-       PlayerPrefs.SetInt("selected", select);
+       PlayerPrefs.SetInt("selected", 1);
        Debug.Log(PlayerPrefs.GetInt("selected"));
        SceneManager.LoadScene(1);
     }
 	private void Start()
 	{
 
-        
+        SetCharacter();
 	}
 }
