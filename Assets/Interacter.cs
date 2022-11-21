@@ -18,8 +18,7 @@ public class Interacter : MonoBehaviour
     void Start()
     {
 
-        pl = GameObject.Find("Body").GetComponent<Player>();
-        st = GameObject.Find("ShotPivo").GetComponent<Shot>();
+        StartCoroutine(wait());
 		try 
         {
             txt = GetComponent<TextListener>();
@@ -60,6 +59,12 @@ public class Interacter : MonoBehaviour
 
         }
 	}
+    public IEnumerator wait() 
+    {
+        yield return new WaitForSeconds(0.8f);
+        pl = GameObject.Find("Body").GetComponent<Player>();
+        st = GameObject.Find("ShotPivo").GetComponent<Shot>();
 
+    }
 
 }

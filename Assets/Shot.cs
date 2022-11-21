@@ -22,15 +22,15 @@ public class Shot : MonoBehaviour
     }
     void shotDirect() 
     {
-		switch (pl.selected)
+		switch (PlayerPrefs.GetInt("selected"))
         {
         case 1:
 
        
         if (Input.GetButtonDown("Fire2") && shot == true)
         {
-                  
-                    Instantiate(shots[pl.selected], local);
+                    Quaternion normal = Quaternion.Euler(local.eulerAngles + new Vector3(0, 0, 0));
+                    GameObject shot = Instantiate(shots[PlayerPrefs.GetInt("selected")], local.transform.position, normal) as GameObject;
                     StartCoroutine(contDown());
         }
         break;
@@ -40,11 +40,13 @@ public class Shot : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && shot == true)
         {
                     
-                    Quaternion lower = Quaternion.Euler(local.eulerAngles + new Vector3(0, 0, -15));
+        Quaternion lower = Quaternion.Euler(local.eulerAngles + new Vector3(0, 0, -15));
         Quaternion top = Quaternion.Euler(local.eulerAngles + new Vector3(0, 0, 15));
-        Instantiate(shots[pl.selected], local);
-        Instantiate(shots[pl.selected], local.transform.position, lower);
-        Instantiate(shots[pl.selected], local.transform.position, top);
+        Quaternion normal = Quaternion.Euler(local.eulerAngles + new Vector3(0, 0, 0));
+        GameObject shot1 = Instantiate(shots[PlayerPrefs.GetInt("selected")], local.transform.position, normal) as GameObject;
+        GameObject shot2 = Instantiate(shots[PlayerPrefs.GetInt("selected")], local.transform.position, lower) as GameObject;
+        GameObject shot3 = Instantiate(shots[PlayerPrefs.GetInt("selected")], local.transform.position, top) as GameObject;
+
         StartCoroutine(contDown());
         }
         break;
@@ -58,13 +60,13 @@ public class Shot : MonoBehaviour
     {
         pl.status = PlayerAnimation.shot;
         shot = false;
-        if (pl.selected == 0) 
+        if (PlayerPrefs.GetInt("selected") == 0) 
         {
             yield return new WaitForSeconds(0.2f);
         }
-        if (pl.selected == 1)
+        if (PlayerPrefs.GetInt("selected") == 1)
         {
-            yield return new WaitForSeconds(5.4f);
+            yield return new WaitForSeconds(0.2f);
         }
         shot = true;
         pl.status = PlayerAnimation.walk;

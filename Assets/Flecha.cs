@@ -21,7 +21,7 @@ public class Flecha : MonoBehaviour
     }
     IEnumerator destruir()
     {
-        yield return new WaitForSeconds(5.4f);
+        yield return new WaitForSeconds(0.8f);
         Destroy(gameObject);
     }
 }

@@ -16,6 +16,15 @@ public class Vivo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Morrer();
+    }
+    void Morrer() 
+    {
+        if (Vida <= 0) 
+        {
+            GameObject ob = GameObject.Find("Hud") as GameObject;
+            ob.transform.Find("Menu").gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }

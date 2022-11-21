@@ -23,19 +23,15 @@ public class Damager : MonoBehaviour
             if(isShot)
 			{
                 pl = GameObject.Find("Body").GetComponent<Player>();
-                damage = pl.sDamage[pl.selected];
+                damage = pl.sDamage[PlayerPrefs.GetInt("selected")];
                 
 			}
             else if (isShot == false)
             {
-                damage = pl.aDamage[pl.selected];
+                damage = pl.aDamage[PlayerPrefs.GetInt("selected")];
             }
         }
-        if(isPlayer == false)
-		{
-            pl = null;
-            player = GameObject.Find("Body").GetComponent<Vivo>();
-        }
+
 		
         
     }
@@ -43,9 +39,13 @@ public class Damager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        
+        if (isPlayer == false && player == null)
+        {
+            pl = null;
+            player = GameObject.Find("Body").GetComponent<Vivo>();
+        }
+
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -112,8 +112,8 @@ public class Damager : MonoBehaviour
         damage = 0;
         yield return new WaitForSeconds(0.2f);
 
-        if (isShot) { damage = pl.sDamage[pl.selected]; }
-        if (isShot == false) { damage = pl.aDamage[pl.selected]; }
+        if (isShot) { damage = pl.sDamage[PlayerPrefs.GetInt("selected")]; }
+        if (isShot == false) { damage = pl.aDamage[PlayerPrefs.GetInt("selected")]; }
 
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum PlayerAnimation 
 {
@@ -12,8 +14,8 @@ public enum PlayerAnimation
 }
 public class Player : MonoBehaviour
 {
-    
-    public int selected;
+
+    bool paused;
     public string PlayerDirect;
     public int[] hp = new int[2];
     public int[] mana = new int[2];
@@ -23,7 +25,7 @@ public class Player : MonoBehaviour
     public float[] aSpeed = new float[2];
     public float[] sSpeed = new float[2];
     public float[] aRange = new float[2];
-    public float[] sRange = new float[2]; 
+    public float[] sRange = new float[2];
     public string[] name = new string[2];
     private bool Attacking;
     public float PlayerAngle;
@@ -41,10 +43,10 @@ public class Player : MonoBehaviour
     public RuntimeAnimatorController[] AnimatorController = new RuntimeAnimatorController[2];
 
 
-	void Spwan() 
+    void Spwan()
     {
 
-        
+
         hp[0] = 10;
         hp[1] = 14;
 
@@ -74,24 +76,24 @@ public class Player : MonoBehaviour
 
         name[0] = "Mina Tenebra";
         name[1] = "Wyn Fridy";
-        
-		
-        
+
+
+
     }
-	
-    
-    void GetComponents() 
+
+
+    void GetComponents()
     {
         characterRg = GetComponent<Rigidbody2D>();
     }
     private void Start()
-	{
-        
-        Debug.Log(selected.ToString());
+    {
+
+        Debug.Log(PlayerPrefs.GetInt("selected").ToString());
         Spwan();
-        vida.Vida = hp[selected];
-        anima.runtimeAnimatorController = AnimatorController[selected];
-        GetComponent<SpriteRenderer>().sprite = sprites[selected];
+        vida.Vida = hp[PlayerPrefs.GetInt("selected")];
+        anima.runtimeAnimatorController = AnimatorController[PlayerPrefs.GetInt("selected")];
+        GetComponent<SpriteRenderer>().sprite = sprites[PlayerPrefs.GetInt("selected")];
 
 
         GetComponents();
@@ -103,36 +105,36 @@ public class Player : MonoBehaviour
             Mover();
         }
     }
-    void Mover() 
+    void Mover()
     {
         xm = Input.GetAxisRaw("Horizontal");
         ym = Input.GetAxisRaw("Vertical");
-        if (xm != 0 || ym != 0 && Attacking == false && TriggerConfirm == false && status == PlayerAnimation.walk) 
+        if (xm != 0 || ym != 0 && Attacking == false && TriggerConfirm == false && status == PlayerAnimation.walk)
         {
-            
-            characterRg.MovePosition(transform.position + new Vector3(xm, ym, 0) * wSpeed[selected] * Time.deltaTime);
-                anima.SetFloat("X", xm);
-                anima.SetFloat("Y", ym);
-                PlayerAngle = Mathf.Atan2(-xm,ym) * Mathf.Rad2Deg;
-                Pivo.transform.eulerAngles = new Vector3(0, 0, PlayerAngle);
+
+            characterRg.MovePosition(transform.position + new Vector3(xm, ym, 0) * wSpeed[PlayerPrefs.GetInt("selected")] * Time.deltaTime);
+            anima.SetFloat("X", xm);
+            anima.SetFloat("Y", ym);
+            PlayerAngle = Mathf.Atan2(-xm, ym) * Mathf.Rad2Deg;
+            Pivo.transform.eulerAngles = new Vector3(0, 0, PlayerAngle);
         }
-		if (xm == 0 || ym == 0)
+        if (xm == 0 || ym == 0)
         {
-            characterRg.MovePosition(transform.position + new Vector3(xm, ym, 0) * wSpeed[selected] * Time.deltaTime);
+            characterRg.MovePosition(transform.position + new Vector3(xm, ym, 0) * wSpeed[PlayerPrefs.GetInt("selected")] * Time.deltaTime);
         }
     }
-    void Attack() 
+    void Attack()
     {
-        StartCoroutine(CoolDown(aSpeed[selected], PlayerAnimation.attack));
+        StartCoroutine(CoolDown(aSpeed[PlayerPrefs.GetInt("selected")], PlayerAnimation.attack));
         if (status == PlayerAnimation.attack)
-        { 
-        anima.SetBool("Ataque",true);
-        Attacking = true;
-        HitCollider.enabled = true;
+        {
+            anima.SetBool("Ataque", true);
+            Attacking = true;
+            HitCollider.enabled = true;
         }
 
 
-        else if(status != PlayerAnimation.attack)
+        else if (status != PlayerAnimation.attack)
         {
             anima.SetBool("Ataque", false);
             Attacking = false;
@@ -141,16 +143,16 @@ public class Player : MonoBehaviour
 
     }
 
-	void Update()
+    void Update()
     {
-
+        Menu();
         Attack();
         characterRg.velocity = Vector2.zero;
 
     }
     public IEnumerator CoolDown(float tempo, PlayerAnimation State)
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0))
         {
             status = State;
             yield return new WaitForSeconds(tempo);
@@ -172,6 +174,24 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         status = PlayerAnimation.walk;
 
+    }
+    void Menu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && paused == false)
+        {
+
+            GameObject ob = GameObject.Find("Hud") as GameObject;
+            ob.transform.Find("Menu").gameObject.SetActive(true);
+            Time.timeScale = 0;
+            paused = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && paused == true)
+        {
+            GameObject ob = GameObject.Find("Hud") as GameObject;
+            ob.transform.Find("Menu").gameObject.SetActive(false);
+            Time.timeScale = 1;
+            paused = false;
+        }
     }
 
 }
