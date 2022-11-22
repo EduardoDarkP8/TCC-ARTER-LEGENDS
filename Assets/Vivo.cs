@@ -7,6 +7,7 @@ public class Vivo : MonoBehaviour
     public int Vida;
     public int Pv_C;
     public int PvMax;
+    public bool isPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class Vivo : MonoBehaviour
     }
     void Morrer() 
     {
-        if (Vida <= 0) 
+        if (Vida <= 0 && isPlayer) 
         {
             GameObject ob = GameObject.Find("Hud") as GameObject;
             ob.transform.Find("Menu").gameObject.SetActive(true);

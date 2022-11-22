@@ -212,6 +212,7 @@ MonoBehaviour:
   Vida: 0
   Pv_C: 0
   PvMax: 0
+  isPlayer: 1
 --- !u!1 &882336525703853468
 GameObject:
   m_ObjectHideFlags: 0
