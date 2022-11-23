@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enimy : MonoBehaviour
 {
 	public Rigidbody2D rgbd;
@@ -37,11 +38,14 @@ public class Enimy : MonoBehaviour
 		if (Target != null && AtaqueTime == false && Stuned == false)
 		{
 			rgbd.MovePosition(Vector2.MoveTowards(transform.position, Target.transform.position, Time.deltaTime * Velocity));
+			anima.SetBool("Andando", true);
 		}
 		else if(Stuned == false)
 		{
 			rgbd.MovePosition(Vector2.MoveTowards(transform.position, transform.position, Time.deltaTime * Velocity));
+			anima.SetBool("Andando", false);
 		}
+		
 	}	
 	public void Find() 
 	{
@@ -67,7 +71,7 @@ public class Enimy : MonoBehaviour
 	{
 		AtaqueTime = true;
 		anima.SetBool("Ataque",true);
-
+		anima.SetBool("Andando", false);
 		yield return new WaitForSeconds(tempo);
 		AtaqueTime = false;
 		anima.SetBool("Ataque", false);

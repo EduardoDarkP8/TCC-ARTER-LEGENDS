@@ -15,6 +15,7 @@ public class Damager : MonoBehaviour
     public bool Cooldown;
     public Collider2D collider;
     public int AtaqueSpeedMultiplier;
+    public bool isHere;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,13 +55,13 @@ public class Damager : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
             {
-                
+                isHere = true;
                 collision.gameObject.GetComponent<Player>().KnockBackhit(transform);
 
                 
                 if (player.Vida != 0)
                 {
-                    player.Pv_C = player.Pv_C - damage;
+                    StartCoroutine(DamagerConfirm(Inimigo.ataqueSpeed));
 
                 }
                 if (isShot)
@@ -98,7 +99,35 @@ public class Damager : MonoBehaviour
         }
         
     }
-    public IEnumerator CoolDown()
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
+        {
+
+            isHere = false;
+        
+        }
+		else 
+        {
+            return;
+        }
+    }
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+        if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
+        {
+
+            isHere = true;
+
+        }
+        else
+        {
+            return;
+        }
+    }
+
+
+	public IEnumerator CoolDown()
     {
             yield return new WaitForSeconds(Inimigo.ataqueSpeed * AtaqueSpeedMultiplier);
             collider.enabled = true;
@@ -116,5 +145,13 @@ public class Damager : MonoBehaviour
         if (isShot) { damage = pl.sDamage[PlayerPrefs.GetInt("selected")]; }
         if (isShot == false) { damage = pl.aDamage[PlayerPrefs.GetInt("selected")]; }
 
+    }
+    public IEnumerator DamagerConfirm(float time) 
+    {
+        yield return new WaitForSeconds(time);
+        if (isHere) 
+        {
+            player.Pv_C = player.Pv_C - damage;
+        }
     }
 }

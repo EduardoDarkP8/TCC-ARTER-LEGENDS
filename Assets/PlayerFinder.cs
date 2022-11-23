@@ -25,9 +25,10 @@ public class PlayerFinder : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.name == "Body" && Vector2.Distance(inimigo.Target.transform.position, transform.position) > 10f)
+        if (collision.name == "Body" && Vector2.Distance(inimigo.Target.transform.position, transform.position) > 2f)
         {
             inimigo.Target = null;
+            inimigo.anima.SetBool("Andando", false); 
         }
         else
         {

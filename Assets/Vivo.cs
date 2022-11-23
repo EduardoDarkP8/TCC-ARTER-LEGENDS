@@ -8,6 +8,7 @@ public class Vivo : MonoBehaviour
     public int Pv_C;
     public int PvMax;
     public bool isPlayer;
+    public bool isTarget;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class Vivo : MonoBehaviour
     void Update()
     {
         Morrer();
+        DestroyTarget();
     }
     void Morrer() 
     {
@@ -28,4 +30,12 @@ public class Vivo : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    void DestroyTarget() 
+    {
+        if (Vida <= 0 && isTarget)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }

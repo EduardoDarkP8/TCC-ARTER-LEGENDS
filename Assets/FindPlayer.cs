@@ -6,6 +6,7 @@ using Cinemachine;
 public class FindPlayer : MonoBehaviour
 {
     CinemachineVirtualCamera cn;
+
     void Start()
     {
         cn = GetComponent<CinemachineVirtualCamera>();
