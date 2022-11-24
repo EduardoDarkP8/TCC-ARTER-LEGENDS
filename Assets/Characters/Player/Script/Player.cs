@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
 
-        Debug.Log(PlayerPrefs.GetInt("selected").ToString());
+
         Spwan();
         vida.Vida = hp[PlayerPrefs.GetInt("selected")];
         anima.runtimeAnimatorController = AnimatorController[PlayerPrefs.GetInt("selected")];
@@ -115,8 +115,10 @@ public class Player : MonoBehaviour
             characterRg.MovePosition(transform.position + new Vector3(xm, ym, 0) * wSpeed[PlayerPrefs.GetInt("selected")] * Time.deltaTime);
             anima.SetFloat("X", xm);
             anima.SetFloat("Y", ym);
+            anima.SetTrigger("Andando");
             PlayerAngle = Mathf.Atan2(-xm, ym) * Mathf.Rad2Deg;
             Pivo.transform.eulerAngles = new Vector3(0, 0, PlayerAngle);
+            
         }
         if (xm == 0 || ym == 0)
         {
