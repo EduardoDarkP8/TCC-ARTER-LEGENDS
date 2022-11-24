@@ -62,8 +62,8 @@ public class Player : MonoBehaviour
         wSpeed[0] = 4;
         wSpeed[1] = 3;
 
-        aSpeed[0] = 0.5f;
-        aSpeed[1] = 1f;
+        aSpeed[0] = 0.2f;
+        aSpeed[1] = 0.6f;
 
         sSpeed[0] = 1.3f;
         sSpeed[1] = 0.9f;
@@ -115,14 +115,24 @@ public class Player : MonoBehaviour
             characterRg.MovePosition(transform.position + new Vector3(xm, ym, 0) * wSpeed[PlayerPrefs.GetInt("selected")] * Time.deltaTime);
             anima.SetFloat("X", xm);
             anima.SetFloat("Y", ym);
-            anima.SetTrigger("Andando");
+            
             PlayerAngle = Mathf.Atan2(-xm, ym) * Mathf.Rad2Deg;
             Pivo.transform.eulerAngles = new Vector3(0, 0, PlayerAngle);
             
         }
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) 
+        {
+            anima.SetBool("Andando",true);
+        }
+        else
+        if (Input.GetAxisRaw("Horizontal") == 0 || Input.GetAxisRaw("Vertical") == 0)
+        {
+            anima.SetBool("Andando",false);
+        }
         if (xm == 0 || ym == 0)
         {
             characterRg.MovePosition(transform.position + new Vector3(xm, ym, 0) * wSpeed[PlayerPrefs.GetInt("selected")] * Time.deltaTime);
+           
         }
     }
     void Attack()
