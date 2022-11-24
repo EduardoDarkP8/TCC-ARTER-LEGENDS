@@ -86,7 +86,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.7.3",
+      "version": "1.7.4",
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -95,10 +95,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.8.6",
+      "version": "2.8.9",
       "depth": 1,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.test-framework": "1.1.31"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
@@ -122,11 +124,11 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.timeline": "1.7.1",
+        "com.unity.timeline": "1.7.2",
         "com.unity.sequences": "1.1.0",
         "com.unity.formats.fbx": "4.1.2",
         "com.unity.formats.alembic": "2.3.0",
-        "com.unity.cinemachine": "2.8.6",
+        "com.unity.cinemachine": "2.8.9",
         "com.unity.recorder": "3.0.3"
       }
     },
@@ -212,7 +214,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-      "version": "1.4.2",
+      "version": "1.6.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
