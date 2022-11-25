@@ -3,7 +3,7 @@ guid: 5f9407ae7a58f1f43af362cd1369f987
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,6 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1756,7 +1759,6 @@ TextureImporter:
       cassashenri1_61: 112906704
       cassashenri1_29: 1185082304
       cassashenri1_21: -1950470046
-      cassashenri1_75: -1341571076
       cassashenri1_48: 1268113153
       cassashenri1_41: -207569413
       cassashenri1_10: 1491256911
@@ -1805,6 +1807,7 @@ TextureImporter:
       cassashenri1_16: -638759072
       cassashenri1_45: 1136386048
       cassashenri1_20: -186941055
+      cassashenri1_75: -1341571076
       cassashenri1_72: -1955412520
       cassashenri1_27: -1086119503
       cassashenri1_6: 1989692414
@@ -1832,7 +1835,6 @@ TextureImporter:
       cassashenri1_60: -1293392193
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
