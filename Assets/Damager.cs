@@ -26,6 +26,7 @@ public class Damager : MonoBehaviour
 			{
                 pl = GameObject.Find("Body").GetComponent<Player>();
                 damage = pl.sDamage[PlayerPrefs.GetInt("selected")];
+
                 
 			}
             else if (isShot == false)
@@ -130,11 +131,12 @@ public class Damager : MonoBehaviour
     }
     public IEnumerator DamagerReduz(Collider2D gm) 
     {
-        if (isShot) { yield return new WaitForSeconds(pl.sSpeed[PlayerPrefs.GetInt("selected")]); }
-        if (isShot == false) { yield return new WaitForSeconds(pl.aSpeed[PlayerPrefs.GetInt("selected")]); }
+ 
+        if (isShot == false) { yield return new WaitForSeconds(pl.aSpeed[PlayerPrefs.GetInt("selected")] ); }
         if (gm.gameObject.GetComponent<Enimy>() != null)
         {
             gm.gameObject.GetComponent<Enimy>().KnockBackhit(transform);
+            
 
         }
         else if (gm.gameObject.GetComponent<Enimy>() == null)
