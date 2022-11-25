@@ -18,6 +18,7 @@ public class Quebravel : Vivo
     void Update()
     {
         Mudar();
+        DestroyTarget();
     }
     void Mudar() 
     {

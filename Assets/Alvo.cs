@@ -8,40 +8,41 @@ public class Alvo : MonoBehaviour
     public GameObject[] Alvos = new GameObject[0];
     public int vida;
     int i;
+    bool start;
     // Start is called before the first frame update
     void Start()
     {
-        
+        vida = Alvos.Length;
+        start = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        FindObjects();
     }
     void FindObjects() 
     {
         
         while (i < Alvos.Length) 
         {
-            if (Alvos[i] != null) 
-            {
-                vida++;     
-            }
-            else if (Alvos[i] == null)
+
+            if (Alvos[i] == null)
             {
                 vida--;
+                Debug.Log(vida.ToString());
             }
             i++;
+            if (vida <= 0 && start)
+            {
+                Destroy(gameObject);
+            }
         }
-        StartCoroutine(countDown());
+        i = 0;
+        vida = Alvos.Length;
     }
-    IEnumerator countDown() 
-    {
-        yield return new WaitForSeconds(0.2f);
-        if (vida == 0) 
-        {
-            Destroy(gameObject);
-        }
-    }
+
+
+        
+    
 }

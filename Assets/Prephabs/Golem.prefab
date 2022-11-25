@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 9.56
+  m_Radius: 6
 --- !u!114 &859960290865463370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18037486, y: 0.21511102}
+  m_Offset: {x: -1.4712642, y: 0.21511102}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -120,7 +120,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.453371, y: 1.7528887}
+  m_Size: {x: 2.8715918, y: 1.7528887}
   m_EdgeRadius: 0
 --- !u!114 &859960291217596360
 MonoBehaviour:
@@ -315,6 +315,7 @@ MonoBehaviour:
   Pv_C: 0
   PvMax: 0
   isPlayer: 0
+  isTarget: 0
 --- !u!61 &859960291527237487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -328,18 +329,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17477763, y: -0.94111013}
+  m_Offset: {x: -0.081740856, y: -0.6212951}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 10, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7988923, y: 3.6542258}
+  m_Size: {x: 1.1243739, y: 1.572521}
   m_EdgeRadius: 0
 --- !u!95 &2798361426216375327
 Animator:

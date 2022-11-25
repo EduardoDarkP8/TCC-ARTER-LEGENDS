@@ -30,7 +30,7 @@ public class Vivo : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-    void DestroyTarget() 
+    public void DestroyTarget() 
     {
         if (Vida <= 0 && isTarget)
         {
