@@ -62,8 +62,8 @@ public class Player : MonoBehaviour
         wSpeed[0] = 4;
         wSpeed[1] = 3;
 
-        aSpeed[0] = 0.2f;
-        aSpeed[1] = 0.6f;
+        aSpeed[0] = 0.35f;
+        aSpeed[1] = 0.45f;
 
         sSpeed[0] = 1.3f;
         sSpeed[1] = 0.9f;

@@ -77,15 +77,7 @@ public class Damager : MonoBehaviour
             else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
             {
                 StartCoroutine(DamagerReduz(collision));
-                if (collision.gameObject.GetComponent<Enimy>() != null) 
-                {
-                    collision.gameObject.GetComponent<Enimy>().KnockBackhit(transform); 
 
-                }
-                else if (collision.gameObject.GetComponent<Enimy>() == null) 
-                {
-                    return;
-                }
    
                 if (isShot)
                 {
@@ -138,6 +130,17 @@ public class Damager : MonoBehaviour
     }
     public IEnumerator DamagerReduz(Collider2D gm) 
     {
+        if (isShot) { yield return new WaitForSeconds(pl.sSpeed[PlayerPrefs.GetInt("selected")]); }
+        if (isShot == false) { yield return new WaitForSeconds(pl.aSpeed[PlayerPrefs.GetInt("selected")]); }
+        if (gm.gameObject.GetComponent<Enimy>() != null)
+        {
+            gm.gameObject.GetComponent<Enimy>().KnockBackhit(transform);
+
+        }
+        else if (gm.gameObject.GetComponent<Enimy>() == null)
+        {
+            yield return null;
+        }
         gm.gameObject.GetComponent<Vivo>().Vida -= damage;
         damage = 0;
         yield return new WaitForSeconds(0.2f);
