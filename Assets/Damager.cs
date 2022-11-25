@@ -136,7 +136,6 @@ public class Damager : MonoBehaviour
         if (gm.gameObject.GetComponent<Enimy>() != null)
         {
             gm.gameObject.GetComponent<Enimy>().KnockBackhit(transform);
-            
 
         }
         else if (gm.gameObject.GetComponent<Enimy>() == null)
