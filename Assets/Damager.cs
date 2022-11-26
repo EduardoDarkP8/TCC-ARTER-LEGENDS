@@ -104,6 +104,20 @@ public class Damager : MonoBehaviour
         {
             return;
         }
+        if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
+        {
+            StartCoroutine(DamagerReduz(collision));
+
+
+            if (isShot)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == false)
+        {
+            return;
+        }
     }
 	private void OnTriggerStay2D(Collider2D collision)
 	{

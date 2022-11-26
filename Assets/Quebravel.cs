@@ -7,11 +7,15 @@ public class Quebravel : Vivo
 
     public Sprite[] sprs = new Sprite[0];
     SpriteRenderer spr;
+    public bool OnlyObj;
 
     // Start is called before the first frame update
     void Start() 
     {
+		if (gameObject.GetComponent<SpriteRenderer>() != null) 
+        { 
         spr = GetComponent<SpriteRenderer>();
+        }
     }
 
     // Update is called once per frame
@@ -22,7 +26,7 @@ public class Quebravel : Vivo
     }
     void Mudar() 
     {
-        if (Vida > 0)
+        if (Vida > 0 && OnlyObj == false)
         {
 
         spr.sprite = sprs[Vida - 1];

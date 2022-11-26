@@ -30,7 +30,7 @@ public class Alvo : MonoBehaviour
             if (Alvos[i] == null)
             {
                 vida--;
-                Debug.Log(vida.ToString());
+
             }
             i++;
             if (vida <= 0 && start)
