@@ -59,7 +59,7 @@ public class Damager : MonoBehaviour
                 isHere = true;
                 collision.gameObject.GetComponent<Player>().KnockBackhit(transform);
 
-                
+
                 if (player.Vida != 0)
                 {
                     StartCoroutine(DamagerConfirm(Inimigo.ataqueSpeed));
@@ -71,7 +71,7 @@ public class Damager : MonoBehaviour
                     Destroy(gameObject);
                 }
                 Cooldown = true;
-                collider.enabled = false;
+                
                 StartCoroutine(CoolDown());
 
             }
@@ -167,9 +167,10 @@ public class Damager : MonoBehaviour
     public IEnumerator DamagerConfirm(float time) 
     {
         yield return new WaitForSeconds(time);
-        if (isHere) 
+        if (isHere)
         {
             player.Pv_C = player.Pv_C - damage;
         }
+        collider.enabled = false;
     }
 }

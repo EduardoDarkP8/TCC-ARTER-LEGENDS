@@ -46566,6 +46566,7 @@ GameObject:
   - component: {fileID: 3815116950734526325}
   - component: {fileID: 3815116950734526327}
   - component: {fileID: 3815116950734526326}
+  - component: {fileID: 5930883181186659329}
   m_Layer: 0
   m_Name: parede
   m_TagString: Untagged
@@ -49681,6 +49682,23 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &5930883181186659329
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3815116950734526324}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &3815116951092478913
 GameObject:
   m_ObjectHideFlags: 0
@@ -57629,6 +57647,7 @@ GameObject:
   - component: {fileID: 3815116951274678470}
   - component: {fileID: 3815116951274678472}
   - component: {fileID: 3815116951274678471}
+  - component: {fileID: 3510215481280290092}
   m_Layer: 0
   m_Name: parede2
   m_TagString: Untagged
@@ -58286,3 +58305,20 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &3510215481280290092
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3815116951274678469}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0

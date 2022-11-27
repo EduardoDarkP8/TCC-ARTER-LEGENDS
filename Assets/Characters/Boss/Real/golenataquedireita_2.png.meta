@@ -1,0 +1,543 @@
+fileFormatVersion: 2
+guid: 34d7b071da2e8a040a7a7acc86f30cfe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: golenataquedireita_2_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 676
+        width: 56
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439d0916cba8e7b48b75d71d99b6130a
+      internalID: 699187737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_1
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 677
+        width: 67
+        height: 88
+      alignment: 9
+      pivot: {x: 0.44849727, y: 0.54705393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acee331dba291914bb34b19e7f20af91
+      internalID: 2128403681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_2
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 676
+        width: 88
+        height: 108
+      alignment: 9
+      pivot: {x: 0.37059924, y: 0.44568324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fca0dd92972e544be56c3a68809772
+      internalID: 2112216106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_3
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 676
+        width: 88
+        height: 107
+      alignment: 9
+      pivot: {x: 0.35491458, y: 0.48065016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af886b16d3d4fc4bba28e02307e7505
+      internalID: 311440258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_4
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 516
+        width: 90
+        height: 109
+      alignment: 9
+      pivot: {x: 0.3169079, y: 0.47480425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f2ba4a78126df42906c5f668464a27
+      internalID: 1862720382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 516
+        width: 88
+        height: 107
+      alignment: 9
+      pivot: {x: 0.35530436, y: 0.49066675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a966123d7a12f47b201ab6723edf24
+      internalID: 188287043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_6
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 516
+        width: 90
+        height: 109
+      alignment: 9
+      pivot: {x: 0.33467814, y: 0.4853745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdbbc0b9a0d33b4d90f2a3cc6ef817f
+      internalID: 1444837733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_7
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 516
+        width: 112
+        height: 90
+      alignment: 9
+      pivot: {x: 0.29123905, y: 0.49606392}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3163e8f4e870b6346898d5ba03801c97
+      internalID: -1020821513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_9
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 355
+        width: 114
+        height: 84
+      alignment: 9
+      pivot: {x: 0.27880022, y: 0.57727957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d10f9af1514894b943be8458fb4e2e
+      internalID: -708143833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_10
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 355
+        width: 114
+        height: 82
+      alignment: 9
+      pivot: {x: 0.27003974, y: 0.5761194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108099afb826dca4f8ca1de16340fd73
+      internalID: -963949701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 355
+        width: 114
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f59cc77ca3b9f4f9cc64885236900c
+      internalID: -750706040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_12
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 355
+        width: 114
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8f602cccb0c60428482234410ce753
+      internalID: -1093586917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_13
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 195
+        width: 114
+        height: 84
+      alignment: 9
+      pivot: {x: 0.26346958, y: 0.53863996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09aa13e30b0ed8e428ee295c3514ec52
+      internalID: -1593111255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_14
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 195
+        width: 114
+        height: 87
+      alignment: 9
+      pivot: {x: 0.25470906, y: 0.5373074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aa70d9618e1b34e98c6de6c36daef6
+      internalID: -691627158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_15
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 195
+        width: 113
+        height: 85
+      alignment: 9
+      pivot: {x: 0.25032893, y: 0.5528717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1441738ad8bde47a57a0192de9595d
+      internalID: 585038948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_16
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 195
+        width: 114
+        height: 87
+      alignment: 9
+      pivot: {x: 0.25470933, y: 0.52582824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70171c0d1dc69e44bb5f6d6a14880397
+      internalID: 1074081572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_17
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 35
+        width: 113
+        height: 85
+      alignment: 9
+      pivot: {x: 0.26800483, y: 0.5293733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f25f4b8fd5d3e41b91feba60f228f9
+      internalID: 1841382009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_18
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 36
+        width: 90
+        height: 86
+      alignment: 9
+      pivot: {x: 0.29748908, y: 0.51741916}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06667cc7b6433ef4d8f192d832833c79
+      internalID: 76873017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golenataquedireita_2_19
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 36
+        width: 65
+        height: 88
+      alignment: 9
+      pivot: {x: 0.48079458, y: 0.52269787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7121dfa14692ec4fbaf7e9aad41590c
+      internalID: -1533323553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      golenataquedireita_2_10: -963949701
+      golenataquedireita_2_19: -1533323553
+      golenataquedireita_2_12: -1093586917
+      golenataquedireita_2_18: 76873017
+      golenataquedireita_2_8: -2146197363
+      golenataquedireita_2_11: -750706040
+      golenataquedireita_2_9: -708143833
+      golenataquedireita_2_5: 188287043
+      golenataquedireita_2_1: 2128403681
+      golenataquedireita_2_3: 311440258
+      golenataquedireita_2_2: 2112216106
+      golenataquedireita_2_17: 1841382009
+      golenataquedireita_2_0: 699187737
+      golenataquedireita_2_4: 1862720382
+      golenataquedireita_2_7: -1020821513
+      golenataquedireita_2_16: 1074081572
+      golenataquedireita_2_13: -1593111255
+      golenataquedireita_2_14: -691627158
+      golenataquedireita_2_6: 1444837733
+      golenataquedireita_2_15: 585038948
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

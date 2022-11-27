@@ -146,7 +146,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15624142, y: -0.370376}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -175,7 +175,7 @@ MonoBehaviour:
   pivo: {fileID: 4798313691821207785}
   Target: {fileID: 0}
   Velocity: 0
-  ataqueSpeed: 0.3
+  ataqueSpeed: 0.5
   AtaqueTime: 0
   anima: {fileID: 4798313690594488208}
   Life: 4

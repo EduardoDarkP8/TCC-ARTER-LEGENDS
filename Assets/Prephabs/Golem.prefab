@@ -265,8 +265,8 @@ MonoBehaviour:
   rgbd: {fileID: 859960291527237486}
   pivo: {fileID: 859960291970429385}
   Target: {fileID: 0}
-  Velocity: 0.5
-  ataqueSpeed: 2
+  Velocity: 1
+  ataqueSpeed: 0.9
   AtaqueTime: 0
   anima: {fileID: 2798361426216375327}
   Life: 10

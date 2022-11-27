@@ -13,7 +13,10 @@ public class Teleport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (OtherScene) 
+        {
+            tr = null;
+        }
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class Teleport : MonoBehaviour
 			if (OtherScene) 
             {
                 PlayerPrefs.SetString("Local", Local);
+                PlayerPrefs.SetInt("Cena", Cena);
                 SceneManager.LoadScene(Cena);
             }
             if (OtherScene == false)
