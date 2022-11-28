@@ -57,12 +57,12 @@ public class Damager : MonoBehaviour
             if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
             {
                 isHere = true;
-                collision.gameObject.GetComponent<Player>().KnockBackhit(transform);
+                
 
 
                 if (player.Vida != 0)
                 {
-                    StartCoroutine(DamagerConfirm(Inimigo.ataqueSpeed));
+                    StartCoroutine(DamagerConfirm(Inimigo.ataqueSpeed, collision));
 
                 }
                 if (isShot)
@@ -164,12 +164,13 @@ public class Damager : MonoBehaviour
         if (isShot == false) { damage = pl.aDamage[PlayerPrefs.GetInt("selected")]; }
 
     }
-    public IEnumerator DamagerConfirm(float time) 
+    public IEnumerator DamagerConfirm(float time, Collider2D collision) 
     {
         yield return new WaitForSeconds(time);
         if (isHere)
         {
             player.Pv_C = player.Pv_C - damage;
+            collision.gameObject.GetComponent<Player>().KnockBackhit(transform);
         }
         collider.enabled = false;
     }
