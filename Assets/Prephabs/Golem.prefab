@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 6
+  m_Radius: 10
 --- !u!114 &859960290865463370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
   rgbd: {fileID: 859960291527237486}
   pivo: {fileID: 859960291970429385}
   Target: {fileID: 0}
-  Velocity: 1
+  Velocity: 1.5
   ataqueSpeed: 0.9
   AtaqueTime: 0
   anima: {fileID: 2798361426216375327}
@@ -276,7 +276,7 @@ MonoBehaviour:
   Stuned: 0
   Stunel: 0
   Weight: 0
-  Velo: 0.5
+  Velo: 1.5
   ataSpd: 0.1
 --- !u!50 &859960291527237486
 Rigidbody2D:
