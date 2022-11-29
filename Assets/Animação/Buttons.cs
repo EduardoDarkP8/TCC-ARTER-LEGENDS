@@ -9,8 +9,15 @@ public class Buttons : MonoBehaviour
     public Animator Anima2;
     public Animator Anima3;
     public Animator Anima4;
-
     public int select;
+    public void Continue() 
+    {
+        if (PlayerPrefs.GetInt("Cena") != 0)
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetInt("Cena"));
+        }
+    }
+
     public void NewGame()
     {
         Anima.SetBool("SelectNewGame",true);
@@ -23,7 +30,7 @@ public class Buttons : MonoBehaviour
     {
         Anima.SetBool("Credits", true);
         Anima2.SetBool("Ativar", true);
-        StartCoroutine(Cooldown(0.1f));
+        Anima3.SetBool("Ativar", true);
         Anima4.SetBool("Ativar", true);
 
     }
@@ -34,30 +41,27 @@ public class Buttons : MonoBehaviour
         Anima.SetBool("Credits", false);
         Anima4.SetBool("Ativar", false);
         Anima3.SetBool("Ativar", false);
-       
-
 
     }
     public void Exit() 
     {
         Application.Quit();
     }
-    public IEnumerator Cooldown(float time) 
-    {
-        yield return new WaitForSeconds(time);
-        Anima3.SetBool("Ativar",true);
-    }
 
-    public void SetCharacter() 
-    {
-
-       PlayerPrefs.SetInt("selected", select);
-       Debug.Log(PlayerPrefs.GetInt("selected"));
-       SceneManager.LoadScene(1);
-    }
-	private void Start()
+    
+    
+    private void Start()
 	{
-
         
-	}
+    }
+	public void SetCharacter() 
+    {
+        PlayerPrefs.SetString("Local", "SpwanPoint1");
+        PlayerPrefs.DeleteKey("selected");
+        PlayerPrefs.SetInt("selected", select);
+        Debug.Log(PlayerPrefs.GetInt("selected"));
+        SceneManager.LoadScene(1);
+    }
+    
+
 }

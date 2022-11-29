@@ -18,8 +18,7 @@ public class Interacter : MonoBehaviour
     void Start()
     {
 
-        pl = GameObject.Find("Body").GetComponent<Player>();
-        st = GameObject.Find("ShotPivo").GetComponent<Shot>();
+        StartCoroutine(wait());
 		try 
         {
             txt = GetComponent<TextListener>();
@@ -47,12 +46,13 @@ public class Interacter : MonoBehaviour
 	{
 		if (other.tag == "Interact" && Input.GetButtonDown("Interact")) 
         {
-            Debug.Log("Ativar");
+          
             pl.enabled = false;
             st.enabled = false;
 
-			if (Talker && txt != null)
+            if (Talker && txt != null)
 			{
+             
                 txt.Criar();
                 txt.Procurar();
                 
@@ -60,6 +60,30 @@ public class Interacter : MonoBehaviour
 
         }
 	}
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Interact" && Input.GetButtonDown("Interact"))
+        {
 
+            pl.enabled = false;
+            st.enabled = false;
+
+            if (Talker && txt != null)
+            {
+
+                txt.Criar();
+                txt.Procurar();
+
+            }
+
+        }
+    }
+    public IEnumerator wait() 
+    {
+        yield return new WaitForSeconds(0.8f);
+        pl = GameObject.Find("Body").GetComponent<Player>();
+        st = GameObject.Find("ShotPivo").GetComponent<Shot>();
+
+    }
 
 }

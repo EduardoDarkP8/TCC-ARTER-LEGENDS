@@ -1,0 +1,543 @@
+fileFormatVersion: 2
+guid: 1bc750f85dde58845b0b5fcaed876cb4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ataquegolencima_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 676
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd13826f9b8b37479d55c6f24874783
+      internalID: 254147585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 676
+        width: 98
+        height: 88
+      alignment: 9
+      pivot: {x: 0.36399966, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b316ea6203e5f45a3e858734e8074d
+      internalID: -2018074989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_2
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 676
+        width: 98
+        height: 88
+      alignment: 9
+      pivot: {x: 0.36619318, y: 0.4975572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d57cc9c0e356dd44872da139f79f430
+      internalID: 289597045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_3
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 676
+        width: 94
+        height: 88
+      alignment: 9
+      pivot: {x: 0.37879458, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced7346f2db6213469bd994819a125fa
+      internalID: -1857756591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 516
+        width: 94
+        height: 88
+      alignment: 9
+      pivot: {x: 0.38114652, y: 0.5021522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9be3b20810c664aaee7da8271fc8b9
+      internalID: -1425055297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 516
+        width: 94
+        height: 88
+      alignment: 9
+      pivot: {x: 0.39524776, y: 0.5086073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23db32708f5855c40baf004304b09909
+      internalID: 1885351282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_6
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 516
+        width: 94
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e94943fb4e236a4299fc13106a20050
+      internalID: 2144093612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_7
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 516
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.3920227, y: 0.3389496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77179e840704eb14db2e9ae8564d24bd
+      internalID: 1139300863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_9
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 358
+        width: 95
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.37285006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d38b16c2ce56a4abc29bf49e0d627f
+      internalID: 99856507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 358
+        width: 95
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5242975, y: 0.34291026}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5336df78a092ed74f994a66d00a4d050
+      internalID: -749895840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 358
+        width: 95
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c4f0d86a1c8794e817ca88329c903c
+      internalID: 141173732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_12
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 356
+        width: 101
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b1bb1afd569b04c884885c14ed4960
+      internalID: -624038524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 195
+        width: 101
+        height: 120
+      alignment: 9
+      pivot: {x: 0.579989, y: 0.3813812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895db6dcc9cf7d64db5b5db972f4dfff
+      internalID: 249345010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_14
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 196
+        width: 90
+        height: 120
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.39705786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0888d1777ef7324681a929238e84b7c
+      internalID: 621680517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_15
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 196
+        width: 94
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5150189, y: 0.39232194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8d5f250f7172f4e8dedee4835edc04
+      internalID: -2004583501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_16
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 196
+        width: 90
+        height: 120
+      alignment: 9
+      pivot: {x: 0.48980442, y: 0.39295146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842faad19dd7fbc4e9f756ffc167e796
+      internalID: 149642971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 36
+        width: 94
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5292837, y: 0.37752935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bf128b7c21e004d992e91134fd950f
+      internalID: -1091845483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_18
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 36
+        width: 110
+        height: 92
+      alignment: 9
+      pivot: {x: 0.4416099, y: 0.45262584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c04e7b0fcfd4a40b421bd0065df3c8
+      internalID: -1237003128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataquegolencima_19
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 36
+        width: 100
+        height: 88
+      alignment: 9
+      pivot: {x: 0.4495343, y: 0.49217978}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d975662affaf284b867320fcdfd0686
+      internalID: -2025814903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ataquegolencima_10: -749895840
+      ataquegolencima_16: 149642971
+      ataquegolencima_12: -624038524
+      ataquegolencima_11: 141173732
+      ataquegolencima_3: -1857756591
+      ataquegolencima_7: 1139300863
+      ataquegolencima_4: -1425055297
+      ataquegolencima_9: 99856507
+      ataquegolencima_15: -2004583501
+      ataquegolencima_0: 254147585
+      ataquegolencima_19: -2025814903
+      ataquegolencima_5: 1885351282
+      ataquegolencima_14: 621680517
+      ataquegolencima_18: -1237003128
+      ataquegolencima_1: -2018074989
+      ataquegolencima_17: -1091845483
+      ataquegolencima_2: 289597045
+      ataquegolencima_6: 2144093612
+      ataquegolencima_8: -1268746867
+      ataquegolencima_13: 249345010
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

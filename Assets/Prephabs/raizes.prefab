@@ -146,18 +146,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.20376861, y: -0.3578689}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1111112, y: 2.4444444}
+    oldSize: {x: 0.625, y: 1.375}
     newSize: {x: 1.1111112, y: 2.4444444}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.70357394, y: 1.7287066}
+  m_Size: {x: 0.33836746, y: 0.6430943}
   m_EdgeRadius: 0
 --- !u!114 &4798313690594488212
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   pivo: {fileID: 4798313691821207785}
   Target: {fileID: 0}
   Velocity: 0
-  ataqueSpeed: 0.3
+  ataqueSpeed: 0.5
   AtaqueTime: 0
   anima: {fileID: 4798313690594488208}
   Life: 4
@@ -185,7 +185,7 @@ MonoBehaviour:
   Stuned: 0
   Stunel: 0
   Weight: 30
-  Velo: 5
+  Velo: 7
   ataSpd: 0.3
 --- !u!114 &4798313690594488205
 MonoBehaviour:
@@ -202,6 +202,8 @@ MonoBehaviour:
   Vida: 0
   Pv_C: 0
   PvMax: 0
+  isPlayer: 0
+  isTarget: 0
 --- !u!1 &4798313690807172184
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +251,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.31216383, y: 0}
+  m_Offset: {x: -0.54393554, y: 0.07003945}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -260,7 +262,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6243277, y: 1}
+  m_Size: {x: 1.1607842, y: 0.50972354}
   m_EdgeRadius: 0
 --- !u!114 &4798313690807172191
 MonoBehaviour:
@@ -298,6 +300,7 @@ MonoBehaviour:
   Cooldown: 0
   collider: {fileID: 4798313690807172190}
   AtaqueSpeedMultiplier: 5
+  isHere: 0
 --- !u!1 &4798313691821207785
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +392,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11540055, y: 0}
-  m_Size: {x: 14.29, y: 14.29}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 13, y: 13}
   m_Direction: 0

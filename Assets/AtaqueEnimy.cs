@@ -27,7 +27,7 @@ public class AtaqueEnimy : MonoBehaviour
 	}
     void OnTriggerStay2D(Collider2D other)
     {
-        StartCoroutine(CoolDown(other, inimigo.ataqueSpeed * 10));
+        StartCoroutine(CoolDown(other, inimigo.ataqueSpeed * 20));
     }
     public IEnumerator CoolDown(Collider2D collision, float Time)
     {

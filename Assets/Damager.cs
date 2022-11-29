@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Damager : MonoBehaviour
 {
     public bool isPlayer;
@@ -14,6 +15,7 @@ public class Damager : MonoBehaviour
     public bool Cooldown;
     public Collider2D collider;
     public int AtaqueSpeedMultiplier;
+    public bool isHere;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,19 +25,16 @@ public class Damager : MonoBehaviour
             if(isShot)
 			{
                 pl = GameObject.Find("Body").GetComponent<Player>();
-                damage = pl.sDamage[pl.selected];
+                damage = pl.sDamage[PlayerPrefs.GetInt("selected")];
+
                 
 			}
             else if (isShot == false)
             {
-                damage = pl.aDamage[pl.selected];
+                damage = pl.aDamage[PlayerPrefs.GetInt("selected")];
             }
         }
-        if(isPlayer == false)
-		{
-            pl = null;
-            player = GameObject.Find("Body").GetComponent<Vivo>();
-        }
+
 		
         
     }
@@ -43,9 +42,13 @@ public class Damager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        
+        if (isPlayer == false && player == null)
+        {
+            pl = null;
+            player = GameObject.Find("Body").GetComponent<Vivo>();
+        }
+
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -53,13 +56,13 @@ public class Damager : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
             {
+                isHere = true;
                 
-                collision.gameObject.GetComponent<Player>().KnockBackhit(transform);
 
-                
+
                 if (player.Vida != 0)
                 {
-                    player.Pv_C = player.Pv_C - damage;
+                    StartCoroutine(DamagerConfirm(Inimigo.ataqueSpeed, collision));
 
                 }
                 if (isShot)
@@ -68,22 +71,14 @@ public class Damager : MonoBehaviour
                     Destroy(gameObject);
                 }
                 Cooldown = true;
-                collider.enabled = false;
+                
                 StartCoroutine(CoolDown());
 
             }
             else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
             {
                 StartCoroutine(DamagerReduz(collision));
-                if (collision.gameObject.GetComponent<Enimy>() != null) 
-                {
-                    collision.gameObject.GetComponent<Enimy>().KnockBackhit(transform); 
 
-                }
-                else if (collision.gameObject.GetComponent<Enimy>() == null) 
-                {
-                    return;
-                }
    
                 if (isShot)
                 {
@@ -97,7 +92,49 @@ public class Damager : MonoBehaviour
         }
         
     }
-    public IEnumerator CoolDown()
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
+        {
+
+            isHere = false;
+        
+        }
+		else 
+        {
+            return;
+        }
+        if (collision.gameObject.GetComponent<Player>() == null && isPlayer == true)
+        {
+            StartCoroutine(DamagerReduz(collision));
+
+
+            if (isShot)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (collision.gameObject.GetComponent<Player>() == null && isPlayer == false)
+        {
+            return;
+        }
+    }
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+        if (collision.gameObject.GetComponent<Player>() != null && isPlayer == false && collider.enabled == true)
+        {
+
+            isHere = true;
+
+        }
+        else
+        {
+            return;
+        }
+    }
+
+
+	public IEnumerator CoolDown()
     {
             yield return new WaitForSeconds(Inimigo.ataqueSpeed * AtaqueSpeedMultiplier);
             collider.enabled = true;
@@ -108,12 +145,33 @@ public class Damager : MonoBehaviour
     }
     public IEnumerator DamagerReduz(Collider2D gm) 
     {
+ 
+        if (isShot == false) { yield return new WaitForSeconds(pl.aSpeed[PlayerPrefs.GetInt("selected")] ); }
+        if (gm.gameObject.GetComponent<Enimy>() != null)
+        {
+            gm.gameObject.GetComponent<Enimy>().KnockBackhit(transform);
+
+        }
+        else if (gm.gameObject.GetComponent<Enimy>() == null)
+        {
+            yield return null;
+        }
         gm.gameObject.GetComponent<Vivo>().Vida -= damage;
         damage = 0;
         yield return new WaitForSeconds(0.2f);
 
-        if (isShot) { damage = pl.sDamage[pl.selected]; }
-        if (isShot == false) { damage = pl.aDamage[pl.selected]; }
+        if (isShot) { damage = pl.sDamage[PlayerPrefs.GetInt("selected")]; }
+        if (isShot == false) { damage = pl.aDamage[PlayerPrefs.GetInt("selected")]; }
 
+    }
+    public IEnumerator DamagerConfirm(float time, Collider2D collision) 
+    {
+        yield return new WaitForSeconds(time);
+        if (isHere)
+        {
+            player.Pv_C = player.Pv_C - damage;
+            collision.gameObject.GetComponent<Player>().KnockBackhit(transform);
+        }
+        collider.enabled = false;
     }
 }

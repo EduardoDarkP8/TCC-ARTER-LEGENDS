@@ -3,7 +3,7 @@ guid: 4d7981dd9f448f947a30c58f2f6d18c6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,6 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -958,7 +961,7 @@ TextureImporter:
       grama_areia_portas_15: -934672115
       grama_areia_portas_24: -1020719395
       grama_areia_portas_33: -114338974
-      grama_areia_portas_22: 1429112485
+      grama_areia_portas_30: -1866256888
       grama_areia_portas_20: 155746447
       grama_areia_portas_6: -176890810
       grama_areia_portas_16: 1279821393
@@ -993,10 +996,9 @@ TextureImporter:
       grama_areia_portas_9: 1323554164
       grama_areia_portas_36: -1355497044
       grama_areia_portas_32: -81421595
-      grama_areia_portas_30: -1866256888
+      grama_areia_portas_22: 1429112485
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

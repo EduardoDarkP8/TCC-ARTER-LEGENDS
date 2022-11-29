@@ -3,7 +3,7 @@ guid: ead1055169cfd28459fade3a7e5527dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,6 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1270,8 +1273,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       arvre_48: 137259047
-      arvre_6: -1854356112
-      arvre_10: -877826194
+      arvre_12: 1806630299
+      arvre_45: -565960792
       arvre_53: 1577829037
       arvre_40: -473974913
       arvre_51: -1164397941
@@ -1322,11 +1325,10 @@ TextureImporter:
       arvre_30: -1709453550
       arvre_22: 1624548965
       arvre_36: -1138148750
-      arvre_12: 1806630299
-      arvre_45: -565960792
+      arvre_6: -1854356112
+      arvre_10: -877826194
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

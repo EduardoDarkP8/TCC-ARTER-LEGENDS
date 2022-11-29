@@ -11,16 +11,29 @@ public class Life : MonoBehaviour
     public Vector3 distancia;
     public Vector3 local;
     public int i;
+    public bool criado;
     // Start is called before the first frame update
     void Start()
     {
-        Criar(vida.Vida);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlusLife();
+		if (criado)
+        {
+            PlusLife();
+        }
+        
+        if(vida != null && criado == false) 
+        {
+            Criar(vida.Vida);
+        }
+		else if(GameObject.Find("Body") != null)
+        {
+            vida = GameObject.Find("Body").GetComponent<Vivo>();
+        }
     }
     public void PlusLife()
     {
@@ -75,6 +88,6 @@ public class Life : MonoBehaviour
             ob.transform.parent = gameObject.transform;
             i++;
         }
-       
+        criado = true;
     }
 }
