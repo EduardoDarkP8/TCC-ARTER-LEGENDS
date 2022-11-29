@@ -23,8 +23,7 @@ public class TextListener : MonoBehaviour
 
 	private void Start()
 	{
-        pl = GameObject.Find("Body").GetComponent<Player>();
-        st = GameObject.Find("ShotPivo").GetComponent<Shot>();  
+        StartCoroutine(find());
 
 	}
 
@@ -96,6 +95,12 @@ public class TextListener : MonoBehaviour
             text.text = textoatual;
         }
 
+    }
+    public IEnumerator find() 
+    {
+        yield return new WaitForSeconds(0.2f);
+        pl = GameObject.Find("Body").GetComponent<Player>();
+        st = GameObject.Find("ShotPivo").GetComponent<Shot>();
     }
 
 }
