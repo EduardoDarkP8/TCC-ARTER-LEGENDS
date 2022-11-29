@@ -61,7 +61,7 @@ public class TextListener : MonoBehaviour
         if (GameObject.Find("Text Box") != null && Existe == true)
         {
 
-            if (i < texto.Length -1)
+            if (i <= texto.Length -1)
             {
                 i++;
                 textoatual = texto[i];
