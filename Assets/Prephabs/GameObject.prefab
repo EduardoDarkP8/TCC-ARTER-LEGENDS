@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2546848891042634062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4004937994690176888}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6f7cd24fb86014e9ffd3bb8498067b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocity: 2000
+  Velocity: 500
 --- !u!50 &5722966977556906501
 Rigidbody2D:
   serializedVersion: 4
@@ -167,8 +167,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.034555286, y: 0}
-  m_Size: {x: 0.43088943, y: 1}
+  m_Offset: {x: -0.018215202, y: -0.0072622895}
+  m_Size: {x: 0.17307897, y: 0.54247713}
   m_Direction: 0
 --- !u!114 &1236048052052553691
 MonoBehaviour:
@@ -192,3 +192,4 @@ MonoBehaviour:
   Cooldown: 0
   collider: {fileID: -2827984606817678340}
   AtaqueSpeedMultiplier: 0
+  isHere: 0

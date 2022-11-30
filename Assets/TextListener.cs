@@ -6,7 +6,6 @@ public class TextListener : MonoBehaviour
 {
 
 
-    private string textoatual;
     public Text text;
     public int i = 0;
     public GameObject ob;
@@ -24,7 +23,7 @@ public class TextListener : MonoBehaviour
 	private void Start()
 	{
         StartCoroutine(find());
-
+     
 	}
 
 	public void Criar()
@@ -36,9 +35,6 @@ public class TextListener : MonoBehaviour
             GameObject caixa = Instantiate(prephab, Local.position, Quaternion.identity) as GameObject;
             caixa.name = "Text Box";
             caixa.transform.parent = canva.transform;
-            textoatual = texto[i];
-
-            Debug.Log(textoatual.ToString());
             ob = GameObject.Find("Text");
             i = 0;
             if (ob == null)
@@ -48,7 +44,7 @@ public class TextListener : MonoBehaviour
             else
             {
                 text = ob.GetComponent<Text>();
-                text.text = textoatual;
+                text.text = texto[i];
                 Procurar();
                 Debug.Log(texto.Length.ToString());
               
@@ -61,10 +57,12 @@ public class TextListener : MonoBehaviour
         if (GameObject.Find("Text Box") != null && Existe == true)
         {
 
-            if (i <= texto.Length -1)
+            if (i < texto.Length -1)
             {
+
+                text.text = texto[i];
                 i++;
-                textoatual = texto[i];
+                
             }
             else
             {
@@ -85,14 +83,13 @@ public class TextListener : MonoBehaviour
         if (ob == null)
         {
             return;
-            Debug.Log("Achou não pai");
+
         }
         else
         {
 
-            Debug.Log("Achou pai");
             text = ob.GetComponent<Text>();
-            text.text = textoatual;
+            
         }
 
     }

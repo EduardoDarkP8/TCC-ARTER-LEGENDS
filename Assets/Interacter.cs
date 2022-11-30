@@ -13,6 +13,7 @@ public class Interacter : MonoBehaviour
     public Shot st;
     public bool Complete;
     public TextListener txt;
+    bool isHere;
 
     // Start is called before the first frame update
     void Start()
@@ -33,36 +34,7 @@ public class Interacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (txt != null && Input.GetButtonDown("Interact")) 
-        {
-            txt.Procurar();
-            txt.Passar();
-
-        }
-
-    }
-	private void OnTriggerStay2D(Collider2D other)
-	{
-		if (other.tag == "Interact" && Input.GetButtonDown("Interact")) 
-        {
-          
-            pl.enabled = false;
-            st.enabled = false;
-
-            if (Talker && txt != null)
-			{
-             
-                txt.Criar();
-                txt.Procurar();
-                
-            }
-
-        }
-	}
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Interact" && Input.GetButtonDown("Interact"))
+        if (isHere && Input.GetButtonDown("Interact"))
         {
 
             pl.enabled = false;
@@ -77,6 +49,31 @@ public class Interacter : MonoBehaviour
             }
 
         }
+
+        if (txt != null && Input.GetButtonDown("Interact")) 
+        {
+            txt.Procurar();
+            txt.Passar();
+
+        }
+        
+
+    }
+	private void OnTriggerExit2D(Collider2D other)
+	{
+        if (other.gameObject.name == "Interact")
+        {
+            isHere = false;
+        }
+
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Interact")
+        {
+            isHere = true;
+        }
+        
     }
     public IEnumerator wait() 
     {
